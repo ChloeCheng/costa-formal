@@ -2,9 +2,9 @@ var login = require('./modules/login.js')
 const app = getApp()
 App({
   global: {
-    hostUrl:'https://costa.slashsoft.cn',
+    hostUrl:'https://miniprogramapi.costa.net.cn',
     wxUserInfo: {},
-    host: 'https://costa.slashsoft.cn/',
+    host: 'https://miniprogramapi.costa.net.cn/',
     currentLanguage: 'zh',
     zh: {
       home: {

@@ -9,8 +9,8 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "1.9.91",
-	"appid": "wxaef59cece1fa6124",
-	"projectname": "costa_mini",
+	"appid": "wxa49bfe2b020414aa",
+	"projectname": "costa_formal",
 	"svr": "",
 	"client": "",
 	"qcloudRoot": "",
@@ -32,7 +32,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 36,
+			"current": -1,
 			"list": [
 				{
 					"id": -1,
