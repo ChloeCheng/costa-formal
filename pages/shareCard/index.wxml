@@ -1,0 +1,37 @@
+<!--pages/share/index.wxml-->
+<dialog bind:info="updateInfo"></dialog>
+<bar active="true" currentData="{{currentDataTotal}}"></bar>
+<view class='share-container'>
+<view  class='bg-image' >
+  <image src='../../assets/share-bg.png' mode='heightFix'></image> 
+</view>
+<view class='content'>
+  <text class="share-tips" wx:if="{{shareType == 5 && detail.status}}">{{currentData.myselfTipFalse}}</text>
+  <text class="share-tips" wx:if="{{shareType == 5 && !detail.status}}">{{detail.to_customer_name}}{{currentData.myselfTipTrue}}</text>
+  <text class="share-tips" wx:if="{{shareType == 3}}">{{currentData.tips}}</text>
+  <text class="share-tips" wx:if="{{shareType == 4}}">{{currentData.tipsNone}}</text>
+  <text class="share-tips" wx:if="{{shareType == 7}}">{{currentData.tipsPastDue}}</text>
+   <view>
+    <image mode='aspectFit' src='../../assets/card_explain.png'></image>
+  </view>
+  <text class="title">{{detail.name}}</text>
+  <text class="sub-title marginTop">{{detail.summary}}</text>
+  <text class="sub-title-time">有效期：{{detail.time}}</text>
+  <view class="card-explain" wx:if="{{(detail.content.length !== 0) && noShareExplain}}">
+     <view>
+        <text class="explain-title">优惠券说明</text>
+        <text class="explain-content"  wx:for="{{detail.content}}" wx:key="{{index}}">{{item}}</text>
+     </view>
+  </view>
+  
+  <block wx:if="{{shareType == 1}}">
+    <button type="default" open-type="share" hover-class="none"> {{currentData.btnTxt}}  </button>
+  </block>
+    <block wx:if="{{shareType == 2}}">
+    <button type="default" hover-class="none" bindtap='getCard'> {{currentData.btnTxtApt}} </button>
+  </block>
+  <block wx:if="{{shareType != 1&& shareType != 2}}">
+    <button type="default" hover-class="none" bindtap='gobackPath'> {{currentData.btnTxtBack}}                   </button>
+  </block>
+</view>
+</view>

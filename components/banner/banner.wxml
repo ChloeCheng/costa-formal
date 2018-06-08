@@ -1,0 +1,16 @@
+<swiper
+    class='vs-index-b-swiper'
+    indicator-dots="{{indicatorDots}}"
+    autoplay="{{autoplay}}"
+    interval="{{interval}}"
+    duration="{{duration}}"
+    indicator-active-color='#ff4800'
+    indicator-color='#fee8ed'
+    circular="{{circular}}"
+  >
+    <block wx:for="{{list}}" wx:for-item="item" wx:key="vs-index-banner-{{item.index}}">
+      <swiper-item>
+        <image src="{{item.img}}" bind:tap="handleBannerItemTap" data-banner-index="{{index}}" data-banner-item="{{item}}" class="vs-index-b-image" mode='widthFix'/>
+      </swiper-item>
+    </block>
+  </swiper>

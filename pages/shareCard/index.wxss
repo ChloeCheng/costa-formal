@@ -1,0 +1,106 @@
+/* pages/share/index.wxss */
+.share-container{
+  width: 100%;
+  background-size:100% 100%;
+}
+.share-bg{
+  width: 100%;
+  height: 100vh;
+}
+.bg-image{
+  width:100%;
+  height:100vh;
+  position:fixed;
+  z-index:-1;
+}
+.bg-image > image{
+  width: 100%;
+  height: 100vh;
+}
+
+.content{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  color: white;
+}
+.content image{
+  width: 340rpx;
+  height:500rpx;
+  position:relative;
+  left:40rpx;
+}
+.content .title{
+  font-size: 36rpx;
+  font-weight: bold;
+  width:100%;
+   text-align:center;
+
+}
+.sub-title{
+  font-size: 28rpx;
+  display: block;
+  text-align: center;
+  width:100%;
+  text-align:center;
+
+}
+.sub-title-time{
+  font-size: 24rpx;
+  display: block;
+  text-align: center;
+  width:100%;
+  text-align:center;
+
+}
+.content .txt{
+  font-size:32rpx;
+  margin: 20rpx auto;
+}
+.content button{
+  width: 80%;
+  font-size:32rpx;
+  margin: 60rpx auto 140rpx;
+  color: white;
+  background-color: #9e0028;
+  padding: 0 120rpx;
+}
+.marginTop{
+  margin-top: 30rpx;
+}
+.share-tips{
+  padding-top:40rpx;
+  height: 100rpx;
+  width: 100%;
+  text-align: center;
+  line-height: 100rpx;
+  color: white;
+  background-color:rgba(0,0,0,0.2) ;
+  font-size: 32rpx;
+}
+
+.card-explain{
+  background-color: rgba(172, 0, 35, 0.4);
+  width:100%;
+  margin-top: 30rpx;
+}
+.card-explain > view {
+  padding: 20rpx 80rpx 40rpx;
+}
+
+.card-explain .explain-title{
+  font-size: 32rpx;
+  font-weight: bold;
+  display: block;
+  text-align: center;
+  margin-bottom: 20rpx;
+}
+
+.card-explain .explain-content{
+  font-size: 24rpx;
+  color:#fff;
+  display: block;
+  width:420rpx;
+  margin: 0 auto;
+}

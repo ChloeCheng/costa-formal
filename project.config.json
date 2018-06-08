@@ -1,0 +1,274 @@
+{
+	"description": "项目配置文件。",
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "1.9.91",
+	"appid": "wxaef59cece1fa6124",
+	"projectname": "costa_mini",
+	"svr": "",
+	"client": "",
+	"qcloudRoot": "",
+	"miniprogramRoot": "",
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"list": []
+		},
+		"miniprogram": {
+			"current": 36,
+			"list": [
+				{
+					"id": -1,
+					"name": "points",
+					"pathName": "pages/point/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "record",
+					"pathName": "pages/record/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "redeem",
+					"pathName": "pages/activity/redeem/index",
+					"query": ""
+				},
+				{
+					"id": 3,
+					"name": "summer",
+					"pathName": "pages/activity/summer/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "promotion",
+					"pathName": "pages/activity/promotion/index",
+					"query": ""
+				},
+				{
+					"id": 5,
+					"name": "shareCard",
+					"pathName": "pages/shareCard/index",
+					"query": "hash=shbkuicmtyvdjtiannpiafckuhvmcnks"
+				},
+				{
+					"id": 6,
+					"name": "shareCardHash",
+					"pathName": "pages/shareCard/index",
+					"query": "hash=bdfavachhtaebdqpqrvizfrftxxfeqbw"
+				},
+				{
+					"id": 7,
+					"name": "url",
+					"pathName": "pages/special/special",
+					"query": "url=https%3A%2Fbaidu.com"
+				},
+				{
+					"id": 8,
+					"name": "userInfo",
+					"pathName": "pages/userInfo/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "login",
+					"pathName": "pages/login/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "member",
+					"pathName": "pages/member/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "summer",
+					"pathName": "pages/activity/summer/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "summer_detail",
+					"pathName": "pages/activity/detail/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "test",
+					"pathName": "pages/test/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "shareCard",
+					"pathName": "pages/shareCard/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "pay",
+					"pathName": "pages/pay/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "login",
+					"pathName": "pages/login/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "agreement",
+					"pathName": "pages/agreement/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "pay",
+					"pathName": "pages/pay/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "detail",
+					"pathName": "pages/activity/detail/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "member",
+					"pathName": "pages/member/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "store",
+					"pathName": "pages/store/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "shareCard",
+					"pathName": "pages/shareCard/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "shareCard",
+					"pathName": "pages/shareCard/index",
+					"query": "id=6226589"
+				},
+				{
+					"id": -1,
+					"name": "shareCard",
+					"pathName": "pages/shareCard/index",
+					"query": "id=6226589"
+				},
+				{
+					"id": -1,
+					"name": "shareCard",
+					"pathName": "pages/shareCard/index",
+					"query": "id=6226589"
+				},
+				{
+					"id": -1,
+					"name": "shareCard",
+					"pathName": "pages/card/index",
+					"query": "id=6226589"
+				},
+				{
+					"id": -1,
+					"name": "shareCard",
+					"pathName": "pages/shareCard/index",
+					"query": "id=6226589"
+				},
+				{
+					"id": -1,
+					"name": "shareCard",
+					"pathName": "pages/shareCard/index",
+					"query": "id=6226589"
+				},
+				{
+					"id": -1,
+					"name": "url",
+					"pathName": "pages/special/special",
+					"query": "url=https%3A%2Fbaidu.com"
+				},
+				{
+					"id": -1,
+					"name": "sharePoint",
+					"pathName": "pages/share/index",
+					"query": "pointHash=bsznkhqadpvvtgxclmsnmizhcpnyqjgf"
+				},
+				{
+					"id": -1,
+					"name": "Card",
+					"pathName": "pages/card/index",
+					"query": "hash=bdfavachhtaebdqpqrvizfrftxxfeqbw"
+				},
+				{
+					"id": -1,
+					"name": "summer",
+					"pathName": "pages/activity/summer/index",
+					"query": "hash=bdfavachhtaebdqpqrvizfrftxxfeqbw"
+				},
+				{
+					"id": -1,
+					"name": "summer",
+					"pathName": "pages/activity/summer/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "login",
+					"pathName": "pages/login/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "login",
+					"pathName": "pages/login/index",
+					"query": ""
+				},
+				{
+					"id": 36,
+					"name": "sharePointed",
+					"pathName": "pages/share/index",
+					"query": "pointHash=gmgxwawywsulggtjkfbzaxdujlvgdobo&isShared=1"
+				},
+				{
+					"id": -1,
+					"name": "login",
+					"pathName": "pages/login/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "sharePoint",
+					"pathName": "pages/share/index",
+					"query": "hash=bdfavachhtaebdqpqrvizfrftxxfeqbw"
+				}
+			]
+		}
+	}
+}

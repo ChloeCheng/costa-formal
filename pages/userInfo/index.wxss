@@ -1,0 +1,121 @@
+/* pages/userInfo/index.wxss */
+.center-title{
+  font-size: 32rpx;
+  color: #a5002a;
+  text-align: center;
+  font-weight: bold;
+}
+.content-block{
+  width: 90%;
+  margin:0 auto;
+  padding-bottom:200rpx;
+}
+.input-block{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border-bottom: 2rpx solid #b5b5b5;
+  padding: 30rpx 0;
+}
+.input-block image.big-image{
+  width: 40rpx;
+  height: 40rpx;
+}
+.input-icon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.input-icon text{
+  color: #c0c2c5;
+  font-size: 24rpx;
+  margin-left: 20rpx;
+}
+.input-icon .require{
+  color: #9e0028;
+  font-size: 24rpx;
+}
+.input-ct{
+  flex: 1;
+  margin-left: 40rpx;
+  font-size: 30rpx;
+  display: flex;
+  justify-content: flex-end;
+  color: #535c64;
+}
+.input-ct input{
+  text-align:right;
+}
+.input-ct  picker{
+  width:100%;
+  text-align:right;
+}
+.label-block{
+  margin: 30rpx auto 30rpx auto;
+  font-size:24rpx;
+}
+.label-block .title{
+  font-size: 32rpx;
+}
+.label-block .select{
+  font-size: 24rpx;
+  color:#c0c2c5;
+}
+.label-block .tips{
+  font-size: 24rpx;
+  color:#535c64;
+}
+.radiu-block{
+  padding-left: 20rpx;
+}
+.radiu-icon{
+  display:inline-block;
+  height:30rpx;
+  width:30rpx;
+  border:solid 2rpx #c0c2c5;
+  border-radius:50%;
+  margin-right: 20rpx;
+  position:relative;
+}
+.checked .radiu-icon{
+  border:solid 2rpx #a5002a;
+}
+.checked .radiu-icon:after{
+  content:"";
+  display: inline-block;
+  width: 20rpx !important;
+  height:20rpx !important;
+  background-color:  #a5002a;
+  border-radius:50%;
+  position:absolute;
+  top:5rpx;
+  left: 5rpx;
+
+}
+.inline-block label.checked{
+  color: #a5002a;
+}
+.inline-block label{
+  display:flex;
+  align-items:center;
+  line-height:28rpx;
+  height:80rpx;
+}
+.inline-block {
+  display: inline-block;
+  width: 40%;
+  font-size: 30rpx;
+  color: #535c64;
+}
+.content-block button{
+  font-size:32rpx;
+  margin: 20rpx auto;
+  color: white;
+  background-color: #9e0028;
+}
+.small-image{
+  position:relative;
+  top:4rpx;
+  width: 24rpx;
+  height:24rpx;
+}

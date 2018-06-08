@@ -1,0 +1,206 @@
+<bar currentData="{{currentDataTotal}}"></bar>
+
+<view class="body">
+   <text class="title">{{currentData.title}}</text>
+   <image src="{{currentLanguage==='zh'? '../../assets/member/member_point.png': '../../assets/member/member_point_en.png'}}" mode='aspectFit'></image>
+   <view class="text-content">
+     <text>{{currentData.content_1}}</text>
+     <text>{{currentData.content_2}}</text>
+     <text>{{currentData.content_3}}</text>
+     <text>{{currentData.content_4}}</text>
+     <text>{{currentData.content_5}}
+         <text class="small">{{currentData.content_5_1}}</text>
+         <text class="small">{{currentData.content_5_2}}</text>
+         <text class="small">{{currentData.content_5_3}}</text>
+     </text>
+     <text>{{currentData.content_6}}</text>
+   </view>  
+   <view class="card-3 card">
+      <image src="../../assets/member/bg-rights-gold.png" mode='aspectFit' class="card-bg"></image>
+      <image src="../../assets/member/member_card_3.png" mode='aspectFit' class="card-icon"></image>
+      <view class="card-list">
+        <view class="card-list-col-1">
+           <view class="row">
+             <image src="../../assets/member/gold_1.png" mode='aspectFit'></image>
+             <view class="text-block">
+              <text>
+               <text>{{currentData.gold_1_1_1}}</text>
+               <text class="gold-text">{{currentData.gold_1_1_2}}</text>
+               <text>{{currentData.gold_1_1_3}}</text>
+               <text  class="gold-text">{{currentData.gold_1_1_4}}</text>
+               </text>
+             </view>
+           </view>
+           <view class="row">
+             <image src="../../assets/member/gold_2.png" mode='aspectFit'></image>
+             <view class="text-block">
+              <text>
+                <text>{{currentData.gold_1_2_1}}</text>
+               <text class="gold-text">{{currentData.gold_1_2_2}}</text>
+               </text>
+             </view>
+           </view>
+        </view> 
+        <view class="card-list-col-1">
+           <view class="row">
+             <image src="../../assets/member/gold_3.png" mode='aspectFit'></image>
+             <view class="text-block">
+             <text>
+               <text>{{currentData.gold_2_1_1}}</text>
+               <text class="gold-text">{{currentData.gold_2_1_2}}</text>
+               <text>{{currentData.gold_2_1_3}}</text>
+               </text>
+             </view>
+           </view>
+           <view class="row">
+             <image src="../../assets/member/gold_4.png" mode='aspectFit'></image>
+             <view class="text-block">
+               <text>
+                <text>{{currentData.gold_2_2_1}}</text>
+               <text class="gold-text">{{currentData.gold_2_2_2}}</text>
+               <text>{{currentData.gold_2_2_3}}</text>
+               </text>
+             </view>
+           </view>
+        </view>
+        <view class="card-list-col-1">
+           <view class="row">
+             <image src="../../assets/member/gold_5.png" mode='aspectFit'></image>
+             <view class="text-block">
+              <text>
+               <text>{{currentData.gold_3_1_1}}</text>
+               <text class="gold-text">{{currentData.gold_3_1_2}}</text>
+               </text>
+             </view>
+           </view>
+           <view class="row">
+             <image src="../../assets/member/gold_6.png" mode='aspectFit'></image>
+             <view class="text-block">
+              <text>
+                <text>{{currentData.gold_3_2_1}}</text>
+               <text class="gold-text">{{currentData.gold_3_2_2}}</text>
+               </text>
+             </view>
+           </view>
+        </view>
+      </view>
+   </view>
+   <view class="card-2 card">
+      <image src="../../assets/member/bg-rights-silver.png" mode='aspectFit' class="card-bg"></image>
+      <image src="../../assets/member/member_card_2.png" mode='aspectFit' class="card-icon"></image>
+      <view class="card-list">
+        <view class="card-list-col-1">
+           <view class="row">
+             <image src="../../assets/member/silver_1.png" mode='aspectFit'></image>
+             <view class="text-block">
+              <text>
+               <text>{{currentData.silver_1_1_1}}</text>
+               <text class="gold-text">{{currentData.silver_1_1_2}}</text>
+               <text>{{currentData.silver_1_1_3}}</text>
+               <text  class="gold-text">{{currentData.silver_1_1_4}}</text>
+               </text>
+             </view>
+           </view>
+           <view class="row">
+             <image src="../../assets/member/silver_2.png" mode='aspectFit'></image>
+             <view class="text-block">
+              <text>
+                <text>{{currentData.silver_1_2_1}}</text>
+               <text class="gold-text">{{currentData.silver_1_2_2}}</text>
+               </text>
+             </view>
+           </view>
+        </view> 
+        <view class="card-list-col-1">
+           <view class="row">
+             <image src="../../assets/member/silver_3.png" mode='aspectFit'></image>
+             <view class="text-block">
+             <text>
+               <text>{{currentData.silver_2_1_1}}</text>
+               <text class="gold-text">{{currentData.silver_2_1_2}}</text>
+               <text>{{currentData.silver_2_1_3}}</text>
+               </text>
+             </view>
+           </view>
+           <view class="row">
+             <image src="../../assets/member/silver_4.png" mode='aspectFit'></image>
+             <view class="text-block">
+               <text>
+                <text>{{currentData.silver_2_2_1}}</text>
+               <text class="gold-text">{{currentData.silver_2_2_2}}</text>
+               <text>{{currentData.silver_2_2_3}}</text>
+               </text>
+             </view>
+           </view>
+        </view>
+        <view class="card-list-col-1">
+           <view class="row">
+             <image src="../../assets/member/silver_5.png" mode='aspectFit'></image>
+             <view class="text-block">
+              <text>
+               <text>{{currentData.silver_3_1_1}}</text>
+               <text class="gold-text">{{currentData.silver_3_1_2}}</text>
+               </text>
+             </view>
+           </view>
+           <view class="row" style="opacity:0;">
+             <image src="../../assets/member/gold_6.png" mode='aspectFit'></image>
+             <view class="text-block">
+              <text>
+                <text>{{currentData.gold_3_2_1}}</text>
+               <text class="gold-text">{{currentData.gold_3_2_2}}</text>
+               </text>
+             </view>
+           </view>
+        </view>
+      </view>
+   </view>
+   <view class="card-1 card">
+      <image src="../../assets/member/bg-rights-red.png" mode='aspectFit' class="card-bg"></image>
+      <image src="../../assets/member/member_card_1.png" mode='aspectFit' class="card-icon"></image>
+      <view class="card-list">
+        <view class="card-list-col-1">
+           <view class="row">
+             <image src="../../assets/member/red_1.png" mode='aspectFit'></image>
+             <view class="text-block">
+              <text>
+               <text>{{currentData.red_1_1_1}}</text>
+               <text class="gold-text">{{currentData.red_1_1_2}}</text>
+               <text>{{currentData.red_1_1_3}}</text>
+               </text>
+             </view>
+           </view>
+           <view class="row">
+             <image src="../../assets/member/red_2.png" mode='aspectFit'></image>
+             <view class="text-block">
+              <text>
+                <text>{{currentData.red_1_2_1}}</text>
+               <text class="gold-text">{{currentData.red_1_2_2}}</text>
+                <text class="">{{currentData.red_1_2_3}}</text>
+               </text>
+             </view>
+           </view>
+        </view> 
+        <view class="card-list-col-1">
+           <view class="row">
+             <image src="../../assets/member/red_3.png" mode='aspectFit'></image>
+             <view class="text-block">
+             <text>
+               <text>{{currentData.red_2_1_1}}</text>
+               <text class="gold-text">{{currentData.red_2_1_2}}</text>
+               </text>
+             </view>
+           </view>
+           <view class="row">
+             <image src="../../assets/member/red_4.png" mode='aspectFit'></image>
+             <view class="text-block">
+               <text>
+                <text>{{currentData.red_2_2_1}}</text>
+               <text class="gold-text">{{currentData.red_2_2_2}}</text>
+               </text>
+             </view>
+           </view>
+        </view>
+      </view>
+   </view>
+</view>

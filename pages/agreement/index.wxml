@@ -1,0 +1,32 @@
+<view class='bg-container'>
+  <view class='bg-image'>
+    <image src='../../assets/share-bg.png' mode='heightFix'></image>
+  </view>
+  <!-- <view class="language-change" bindtap="changeLanguage">
+    <image src="{{currentLanguage==='zh' ? '../../assets/en.png' : '../../assets/zh.png'}}" mode='aspectFit'></image>
+  </view> -->
+
+  <view class='content-block'>
+    <view class='block-title'>
+      <image src='../../assets/costa-logo.png' mode='widthFix'></image>
+      <text>{{currentData.title}}</text>
+    </view>
+    <view class='list-container'>
+      <view class='list-block' wx:key="unique" wx:for="{{currentData.list}}" wx:for-item="item">
+        <view class='list-title'>
+          {{item.title}}
+        </view>
+        <view class='list-note'>
+          {{item.note}}
+        </view>
+        <view class='list-item' wx:key="unique" wx:for-index="index" wx:for="{{item.sub}}" wx:for-item="subItem">
+          <text class='list-item-index'> ({{index + 1}})</text> {{subItem}}
+        </view>
+      </view>
+    </view>
+
+    <button type="default" hover-class="none" bindtap='goback'>
+      {{currentData.btnTxt}}</button>
+  </view>
+
+</view>

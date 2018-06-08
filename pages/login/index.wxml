@@ -1,0 +1,88 @@
+<!--pages/share/index.wxml-->
+<view class='bg-container'>
+  <view class='bg-image'>
+    <image src='../../assets/share-bg.png' mode='heightFit'></image>
+  </view>
+  <!--view class="language-change" bindtap="changeLanguage">
+    <image src="{{currentLanguage==='zh' ? '../../assets/en.png' : '../../assets/zh.png'}}" mode='aspectFit'></image>
+  </view-->
+
+  <view class='content-block'>
+    <view class="title-block">
+      <view>
+        <image mode='aspectFit' src='../../assets/login/logo.png' />
+      </view>
+      <text>{{currentData.title}}</text>
+    </view>
+
+    <view class="input-block">
+      <view class="input-left">
+        <view class="input-icon">
+          <image mode='aspectFit' src='../../assets/login/tel.png' />
+          <text>+86</text>
+        </view>
+      </view>
+      <view class="input-ct">
+        <input placeholder-class="placeholder-input" placeholder='{{currentData.tel}}' bindinput="bindTelInput"></input>
+      </view>
+    </view>
+
+    <view class="input-block">
+      <view class="input-left">
+        <view class="input-icon">
+          <image mode='aspectFit' src='../../assets/login/code.png' />
+        </view>
+      </view>
+      <view class="input-ct">
+        <input placeholder='{{currentData.code}}' placeholder-class="placeholder-input" bindinput="bindCodeInput"></input>
+        <view>
+          <button class="btn-sms" bindtap='sendSMS'>
+            {{secondFlag == -1?currentData.sms:(secondFlag + currentData.tips)}}
+          </button>
+        </view>
+      </view>
+    </view>
+
+    <view class="input-block">
+      <view class="input-left">
+        <view class="input-icon">
+          <image mode='aspectFit' src='../../assets/login/day.png' />
+        </view>
+      </view>
+      <view class="input-ct">
+        <view class="select-data">
+          <picker mode="date" value="{{date}}" bindchange="bindDateChange">
+            <view class="picker">
+              {{date}}
+            </view>
+          </picker>
+        </view>
+        <view>
+          <image class="small-image" mode='aspectFit' src='../../assets/arrow.png' />
+        </view>
+      </view>
+    </view>
+
+    <view class='button-confirm'>
+      <button type="default" size="{{defaultSize}}" hover-class="none" bindtap='gotoLogin'>
+        {{currentData.btnTxt}}
+      </button>
+    </view>
+
+    <!-- <view class='button-confirm'>
+      <button type="default" size="{{defaultSize}}" hover-class="none" bindtap='openSetting'>
+        关闭授权
+      </button>
+    </view> -->
+  </view>
+
+  <view class='agreement'>
+    <view class="check-icon" bindtap='switchCheck'>
+      <image wx:if="{{!checked}}" mode='aspectFit' src='../../assets/uncheck.png' />
+      <image wx:if="{{checked}}" mode='aspectFit' src='../../assets/checked.png' />
+    </view>
+    <text>{{currentData.btnAgreement1}}</text>
+    <text class='red-txt' bindtap='goAgreement'>{{currentData.btnAgreement2}}</text>
+  </view>
+
+</view>

@@ -1,0 +1,32 @@
+<view class="body">
+  <view  class='bg-image' >
+    <image class="bg" src="../../../assets/summer/summer_bg.png"></image>
+  </view>
+  <text class="title">会员畅享一夏</text>
+  <view class="summer-line">
+      <image class="line" src="../../../assets/summer/line.png" mode='aspectFit'></image>
+      <image class="bean"  src="../../../assets/summer/bean.png" mode='aspectFit'></image>
+  </view>
+  <view class="block">
+    <view class="text-block">
+      <view class="block-title">
+        <text>活动时间</text>
+      </view>
+      <text>2018年5月4日至2018年7月5日</text>
+    </view>
+     <view class="text-block">
+      <view class="block-title">
+        <text>活动规则</text>
+      </view>
+      <view class="text-bock-content">
+       <text>1、活动期间，会员正价购买1杯任意酷乐冰或冷萃系列新品，即可获得好友分享券1张；累计至3杯任意杯型酷乐冰或冷萃系列新品，即可获赠2张好友分享券以及1个COSTA限量钥匙扣；累计至6杯任意杯型酷乐冰或冷萃系列新品，即可获赠2张好友分享券以及1个COSTA限量手包；累计至9杯任意杯型酷乐冰或冷萃系列新品，即可获赠3张好友分享券以及1本COSTA限量笔记本；</text>
+       <text>2、酷乐冰系列新品:海盐开心果摩卡酷乐冰、草莓优格酷乐冰、苏格兰太妃酷乐冰</text>
+       <text>3、冷萃系列新品：冷萃冰咖啡、丝绒冷萃冰咖啡、香草冷萃冰咖啡、焦糖冷萃冰咖啡、牛奶冷萃冰咖啡、香草牛奶冷萃冰咖啡、焦糖牛奶冷萃冰咖啡、焦糖丝绒冷萃冰咖啡</text>
+       <text>4、COSTA限量钥匙扣、手包、笔记本兑换券均在累计杯数到达后次日达到会员卡中，凭兑换券前往门店即可兑换。</text>
+       <text>5、好友分享券：每张分享券可成功邀请1名微信好友入会，次日邀请者即可获得买一送一券</text>
+       <text>6、礼品数量有限，先到先得，送完为止，礼品以实物为准。</text>
+       <text>7、此活动的优惠券只适用于咖世家咖啡（上海）有限公司所属门店，交通枢纽店、杭州阿里巴巴店、万达影城店、SSP店、Compass店不参与此活动。</text>
+      </view>
+    </view>
+  </view>
+</view>  

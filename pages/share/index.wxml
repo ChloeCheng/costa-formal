@@ -1,0 +1,36 @@
+<!--pages/share/index.wxml-->
+<dialog bind:info="updateInfo"></dialog>
+<bar active="true" currentData="{{currentData}}"></bar>
+<view class='share-container'>
+<view  class='bg-image' >
+  <image src='../../assets/share-bg.png' mode='heightFix'></image> 
+</view>
+  <view class="share-tips" wx:if="{{shareType == 3}}">{{currentData.share.tips}}</view>
+  <view class="share-tips" wx:if="{{shareType == 4}}">{{currentData.share.tipsNone}}</view>
+  <view class="share-tips" wx:if="{{shareType == 5}}">{{currentData.share.tipsWaite}}</view>
+  <view class="share-tips" wx:if="{{shareType == 7}}">{{currentData.share.tipsPastDue}}</view>
+  <view class="share-tips" wx:if="{{shareType == 8}}">{{infoDetail.to_customer_name}} {{currentData.share.tipsNoneMy}}</view>
+<view class='content'>
+  <view wx:if="{{shareType != 4}}">
+    <image mode='aspectFit' src='../../assets/share-icon.png' />
+  </view>
+   <view  wx:if="{{shareType == 4}}">
+    <image mode='aspectFit' src='../../assets/share-none.png' />
+  </view>
+  <text class="title"  wx:if="{{shareType != 4}}">{{currentData.share.title}}</text>
+  <text class="title"  wx:if="{{shareType == 4}}">{{currentData.share.titleNone}}</text>
+  
+  <text class="txt"  wx:if="{{shareType != 4}}">{{currentData.share.txt}}</text>
+  <text class="txt"  wx:if="{{shareType == 4}}">{{currentData.share.titleNone}}</text>
+  
+  <block wx:if="{{shareType == 1}}">
+    <button type="default" open-type="share" bindshare="" hover-class="none" bindtap='goback'> {{currentData.share.btnTxt}}     </button>
+  </block>
+    <block wx:if="{{shareType == 2}}">
+    <button type="default" hover-class="none" bindtap='goback'> {{currentData.share.btnTxtApt}} </button>
+  </block>
+  <block wx:if="{{shareType != 1&&shareType != 2}}">
+    <button type="default" hover-class="none" bindtap='goback'> {{currentData.share.btnTxtBack}}                   </button>
+  </block>
+</view>
+</view>

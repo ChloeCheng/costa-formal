@@ -1,0 +1,47 @@
+.authorize-cover, .dialog-cover{
+    position: fixed;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    z-index:200;
+    background: rgba(0,0,0,0.4);
+  }
+  .authorize-dialog{
+    position: fixed;
+    top:50%;
+    left:50%;
+    z-index: 201;
+    transform: translate(-50%, -50%);
+    border:1rpx solid #ccc;
+    width: 600rpx;
+    background: #FFF;
+    border-radius: 10rpx;
+    text-align: center;
+  }
+  .authorize-dialog text{
+    font-size:32rpx;
+    color:#949295;
+    padding:50rpx 24rpx;
+    display:block;
+    border-bottom: 1rpx solid #EDEBED;
+  }
+  .authorize-dialog button{
+    font-size: 32rpx;
+    color: #3D3C40;
+    background: #fff;
+    border:0;
+    outline: none;
+    border-radius: none;
+    padding: 20rpx;
+  }
+  
+  .authorize-dialog button:visited, .authorize-dialog button:focus{
+    outline: none;
+    border-radius: none;
+    border: 1rpx solid transparent;
+  }
+
+  button.u-login-wx::after {
+    border: 0;
+  }

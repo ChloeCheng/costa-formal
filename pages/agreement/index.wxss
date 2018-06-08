@@ -1,0 +1,82 @@
+/* pages/agreement/index.wxss */
+.bg-container{
+  width: 100%;
+  height: 100vh;
+  background-size:100% 100%;
+}
+.bg-image{
+  width:100%;
+  height:100vh;
+  position:fixed;
+  z-index:-1;
+}
+.bg-image > image{
+  width: 100%;
+  height: 100%;
+  filter:blur(6rpx);
+}
+.language-change{
+  background: #A6002A;
+  width:64rpx;
+  height:64rpx;
+  position: fixed;
+  top:100rpx;
+  right:15rpx;
+  border-radius: 64rpx;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.language-change image{
+  background: #A6002A;
+  width:36rpx;
+  height:36rpx;
+}
+
+.content-block{
+  color:white;
+  font-size:26rpx;
+  width: 90%;
+  margin: 0 auto;
+  line-height: 40rpx;
+}
+.block-title image{
+  width: 200rpx;
+  margin-right: 10rpx;
+}
+.block-title{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 110rpx;
+  padding-bottom: 40rpx;
+  font-size:40rpx;
+}
+.list-block{
+  padding-bottom: 40rpx;
+}
+.list-item{
+  position: relative;
+  margin-left: 70rpx;
+}
+.list-title{
+  margin-bottom: 10rpx;
+}
+.list-item-index{
+  position: absolute;
+  left: -50rpx;
+}
+
+.bg-container button{
+  width: 90%;
+  font-size:32rpx;
+  margin: 20rpx auto;
+  color: white;
+  background-color: #9e0028;
+}
+
+.list-container{
+  height:70vh;
+  overflow:scroll;
+} 

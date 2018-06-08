@@ -1,0 +1,7 @@
+
+
+<view class="authorize-cover" wx-if="{{!authorizeUserInfo}}"></view>
+<view class="authorize-dialog" wx-if="{{!authorizeUserInfo}}">
+      <text>检测到您未打开微信用户信息授权，开启后即可进行操作</text>
+      <button class="u-login-wx" type="primary" open-type="getUserInfo" bindgetuserinfo="getuserinfo" hover-class="none">去开启</button>
+</view>

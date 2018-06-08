@@ -1,0 +1,7 @@
+.vs-index-b-swiper{
+    height: 360rpx;
+  }
+  
+  .vs-index-b-image{
+    width: 100%;
+  }

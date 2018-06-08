@@ -1,0 +1,41 @@
+/* pages/activity/promotion/index.wxss */
+.center-title{
+  font-size: 36rpx;
+  color: #a5002a;
+  text-align: center;
+  margin: 30rpx auto;
+  font-weight: bold;
+}
+
+.block-radiu{
+  transform:scale(0.9,0.9);
+  margin: 0 auto;
+}
+.block-radiu image{
+  border-radius: 10rpx;
+}
+.promotion-info{
+  display: flex;
+  align-items: center;
+  width: 90%;
+  padding: 20rpx 0;
+  margin: 0 auto;
+  border-bottom:2rpx solid #b5b5b5;
+}
+.promotion-info image{
+  width:100rpx;
+  height:100rpx;
+  margin:0 20rpx;
+}
+.promotion-info  .tips{
+  font-size: 32rpx;
+  margin-bottom: 10rpx;
+}
+.promotion-info .info-block{
+  display: flex;
+  flex-direction: column;
+}
+.promotion-info  .txt{
+  font-size: 24rpx;
+  color:#535c64;
+}

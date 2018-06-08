@@ -1,0 +1,156 @@
+/* pages/share/index.wxss */
+.bg-container{
+  width: 100%;
+  height: 100vh;
+  background-size:100% 100%;
+}
+.bg-image{
+  width:100%;
+  height:100vh;
+  position:fixed;
+  z-index:-1;
+}
+.bg-image > image{
+  width: 100%;
+  height: 100%;
+  filter:blur(6rpx);
+}
+.language-change{
+  background: #A6002A;
+  width:64rpx;
+  height:64rpx;
+  position: fixed;
+  top:100rpx;
+  right:15rpx;
+  border-radius: 64rpx;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.language-change image{
+  background: #A6002A;
+  width:36rpx;
+  height:36rpx;
+}
+.content-block{
+  padding-top: 200rpx;
+  width: 90%;
+  margin: 0 auto;
+}
+.button-confirm button{
+  margin-top:100rpx;
+  font-size:32rpx;
+  margin: 20rpx auto;
+  color: white;
+  background-color: #9e0028;
+}
+.button-confirm{
+  margin-top:50rpx;
+}
+.title-block{
+  text-align: center;
+  color: white;
+  font-size:32rpx;
+  margin-bottom:20rpx;
+}
+.title-block image{
+  width: 300rpx;
+  height: 150rpx;
+}
+.title-block txt{
+  width: 100rpx;
+}
+.input-block{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border-bottom: 2rpx solid #b5b5b5;
+  padding: 20rpx 0;
+  font-size: 36rpx;
+}
+.input-block image{
+  width: 60rpx;
+  height: 60rpx;
+}
+.input-icon{
+  display: flex;
+  align-items: center;
+}
+.input-icon text{
+  color: white;
+  font-size: 32rpx;
+  margin-left: 20rpx;
+}
+
+.input-ct{
+  flex: 1;
+  margin-left: 20rpx;
+  font-size: 30rpx;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  align-items:center;
+}
+.input-ct .small-image{
+  width: 38rpx;
+  height: 38rpx;
+}
+
+.input-left{
+  min-width:140rpx;
+}
+.btn-sms{
+  font-size:26rpx;
+  height:80rpx;
+  line-height:80rpx;
+  color:#222;
+  background: rgba(255, 255, 255, 0.5);
+  width:240rpx;
+}
+
+.agreement{
+  position: fixed;
+  bottom:60rpx;
+  right:15rpx;
+  color: white;
+  font-size: 24rpx;
+  width:100%;
+  text-align:center;
+}
+.agreement checkbox{
+  color: white;
+}
+
+.agreement .red-txt{
+  color: #9e0028;
+}
+.check-icon {
+  display: inline-block;
+  color:white;
+}
+.check-icon image{
+  width: 30rpx;
+  height: 30rpx;
+  margin-right: 20rpx;
+  position: relative;
+  top:6rpx;
+}
+.placeholder-input{
+  color: white;
+  opacity:0.8;
+}
+.select-data {
+  width:100%;
+  z-index:11;
+  margin-right:-30rpx;
+}
+.select-data picker{
+  height:60rpx;
+  line-height:60rpx;
+  width:100%;
+  position:relative;
+  left:30rpx;
+  margin-left:-30rpx;
+
+}

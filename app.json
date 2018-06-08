@@ -1,0 +1,30 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/point/index",
+    "pages/store/index",
+    "pages/activity/summer/index",
+    "pages/activity/detail/index",
+    "pages/activity/redeem/index",
+    "pages/activity/promotion/index",
+    "pages/share/index",
+    "pages/shareCard/index",
+    "pages/userInfo/index",
+    "pages/card/index",
+    "pages/test/index",
+    "pages/member/index",
+    "pages/login/index",
+    "pages/agreement/index",
+    "pages/pay/index",
+    "pages/special/special"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "COSTA",
+    "navigationBarTextStyle": "black"
+  },
+  "networkTimeout": {
+    "request": 10000
+  }
+}

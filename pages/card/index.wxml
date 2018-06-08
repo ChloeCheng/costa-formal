@@ -1,0 +1,55 @@
+<bar currentData="{{currentDataTotal}}"></bar>
+<view class="card-body">
+   <text class="card-title">{{currentData.title}}</text>
+   <view class="card-active">
+      <view  class="card-active-head" bindtap="activeSpreadTap">
+         <view class="card-icon">
+            <image src="../../assets/card/card_active.png" mode='aspectFit'></image>
+         </view>
+         <text class="card-num" wx:if="{{currentLanguage === 'zh'}}">{{currentData.myCard}}<text>{{notExpired.length}}</text>张</text>
+         <text class="card-num" wx:if="{{currentLanguage === 'en'}}">{{currentData.myCard}}<text>{{notExpired.length}}</text></text>
+         <view class="card-op">
+             <image src="{{activeSpread?'../../assets/card/card_active_up.png':'../../assets/card/card_active_down.png'}}" mode='aspectFit'></image>
+             <text>{{activeSpread? currentData.pickUp:currentData.more}}</text>
+         </view>
+      </view>
+      <view class="card-active-list"  wx:if="{{activeSpread}}">
+        <view class="card-active-list-item" bindtap="gotoDetail" wx:for="{{notExpired}}"  wx:key="{{index}}" data-item="{{item}}">
+            <view class="card-icon-small">
+                <image src="{{item.icon ? ('../../assets/card/type_'+item.icon+'.png') : ''}}" mode='aspectFit'></image>
+            </view>
+            <view class="card-center">
+              <text class="card-center-title card-active-status">{{item.name}}</text>
+              <text>{{item.summary}}</text>
+            </view>
+            <text class="card-list-time">{{currentData.validityTime}} {{item.time}}</text>
+        </view> 
+      </view>
+   </view>
+
+   <view class="card-disable">
+      <view  class="card-disable-head" bindtap="disableSpreadTap">
+         <view class="card-icon">
+            <image src="../../assets/card/card_overtime.png" mode='aspectFit'></image>
+         </view>
+         <text class="card-num" wx:if="{{currentLanguage === 'zh'}}">{{currentData.expiredCoupons}}<text>{{expired.length}}</text>张</text>
+         <text class="card-num" wx:if="{{currentLanguage === 'en'}}">{{currentData.expiredCoupons}}<text>{{expired.length}}</text></text>
+         <view class="card-op">
+             <image src="{{disableSpread?'../../assets/card/card_disable_up.png':'../../assets/card/card_disable_down.png'}}" mode='aspectFit'></image>
+             <text>{{disableSpread?currentData.pickUp:currentData.more}}</text>
+         </view>
+      </view>
+      <view class="card-active-list" wx-if="{{disableSpread}}">
+        <view class="card-active-list-item"  wx:for="{{expired}}" wx:key="{{index}}">
+            <view class="card-icon-small">
+                <image src="{{item.icon ? ('../../assets/card/type_'+item.icon+'.png') : ''}}" mode='aspectFit'></image>
+            </view>
+            <view class="card-center">
+              <text class="card-center-title">{{item.name}}</text>
+              <text>{{item.summary}}</text>
+            </view>
+            <text class="card-list-time">{{currentData.validityTime}} {{item.time}}</text>
+        </view>
+      </view>
+   </view>
+</view>

@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "zan-button": "../../components/vendor/dist/btn/index",
+    "zan-dialog": "../../components/vendor/dist/dialog/index"
+  }
+}

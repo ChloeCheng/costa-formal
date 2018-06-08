@@ -1,0 +1,31 @@
+.tabbar{
+    position: fixed;
+    bottom: 0;
+    z-index: 10;
+    height:106rpx;
+    display: flex;
+     width:100%;
+     background: #9E0028;
+     align-items: center;
+     justify-content: center;
+     text-align: center;
+}
+.tabbar > view {
+    flex:1;
+}
+
+.tabbar image {
+    margin-top:12rpx;
+    width:42rpx;
+    height:42rpx;
+}
+
+.tabbar text{
+    font-size: 24rpx;
+    color:#DAA5B1;
+    display: block;
+}
+
+.tabbar text.active{
+    color:#FBF5F7;
+}

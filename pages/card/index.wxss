@@ -1,0 +1,141 @@
+/* pages/points/index.wxss */
+.card-body{
+  padding: 0rpx 40rpx 180rpx 40rpx;
+}
+.card-title{
+  color:#9A0020;
+  font-size: 36rpx;
+  font-weight: bold;
+  display: block;
+  text-align: center;
+}
+
+.card-active{
+   border-bottom: 1rpx solid #dbdbdb;
+   padding:20rpx 0 40rpx;
+
+}
+
+.card-active-head{
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  border: 2px solid #9E0028;
+  border-radius: 10rpx;
+}
+.card-icon, .card-icon-small{
+  height:140rpx;
+  width:120rpx;
+  background:#9E0028;
+  text-align: center;
+
+}
+
+.card-icon image{ 
+  width:80rpx;
+  height:80rpx;
+  margin-top:26rpx;
+
+}
+
+.card-icon-small image{
+  width:56rpx;
+height:56rpx;
+margin-top:40rpx;
+
+}
+.card-num{
+  margin-left:20rpx;
+}
+.card-num text{
+  font-weight: bolder;
+  margin: 0 4rpx;
+}
+.card-active-head text{
+  flex:1;
+  color:#9E0028;
+  font-size: 32rpx;
+}
+.card-op{
+  width:82rpx;
+  text-align:center;
+  
+}
+.card-op image{
+  width:32rpx;
+  height:32rpx;
+}
+.card-op text{
+  display: block;
+  font-size:22rpx;
+  color:#9E0028;
+  position:relative;
+  top:-4rpx;
+
+}
+
+.card-active-list-item{
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  border: 2px solid #959595;
+  border-radius: 10rpx;
+  margin-top:20rpx;
+}
+
+.card-active-list-item .card-icon, .card-active-list-item .card-icon-small{
+  background: #fff;
+}
+.card-center{
+  font-size: 28rpx;
+  margin-left: 20rpx;
+  width:260rpx;
+}
+.card-center text{
+  font-size: 24rpx;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.card-center text.card-active-status{
+  color:#9A0020;
+}
+.card-center text.card-center-title{
+  font-size: 30rpx;
+  font-weight: bold;
+}
+.card-center text.card-center-title + text {
+  margin-top: 6rpx;
+}
+.card-list-time{
+  font-size: 24rpx;
+  align-self: flex-end;
+  margin-bottom: 20rpx;
+  margin-right:10rpx;
+  color:#8E8E8E;
+  flex:1;
+  text-align:right;
+}
+
+.card-disable-head{
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  border: 2px solid #959595;
+  border-radius: 10rpx;
+  margin-top:40rpx;
+}
+
+.card-disable-head .card-icon{
+  background: #959595;
+}
+
+.card-disable-head > text{
+  flex:1;
+  color:#454F57;
+  font-size: 32rpx;
+}
+.card-disable-head .card-op text{
+  color:#454F57;
+}

@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "banner": "../../components/banner/banner",
+    "bar": "../../components/bar/bar",
+    "dialog": "../../components/dialog/dialog"
+  }
+}

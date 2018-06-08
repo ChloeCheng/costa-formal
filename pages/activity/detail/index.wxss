@@ -1,0 +1,91 @@
+.body{
+  padding: 20rpx 0rpx 0 0rpx;
+}
+.title{
+  color: #b28862;
+  font-size: 90rpx;
+  font-weight: bold;
+  text-align: center;
+  display: block;
+  padding:40rpx 0 0 0;
+}
+.bg-image{
+  width:100%;
+  height:100vh;
+  position:fixed;
+  z-index:-1;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+}
+.bg-image > image{
+  width: 100%;
+  height: 100%;
+}
+.summer-line{
+  position: relative;
+}
+.line{
+  width:100%;
+  height:100rpx;
+}
+.bean{
+  width:32rpx;
+  height:32rpx;
+  position: absolute;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.block{
+  background: rgba(255,255,255,0.8);
+  padding-top: 60rpx;
+}
+
+.text-block{
+
+}
+.block-title{
+  background: #BF895D;
+  color:#fff;
+  display: inline-block;
+  padding: 6rpx 100rpx 6rpx 100rpx;
+  font-size: 42rpx;
+  position: relative;
+}
+
+.block-title::after{
+  content: '';
+  position: absolute;
+  border-top: 36rpx solid transparent;
+  border-left: 36rpx solid transparent;
+  border-bottom: 36rpx solid transparent;
+  border-right: 36rpx solid #fff;
+  top:0;
+  right:0rpx;
+}
+
+.text-block > text{
+  display: block;
+  font-size: 30rpx;
+  color:#575757;
+  margin: 60rpx 0 0 100rpx;
+
+}
+
+.text-block{
+  margin-bottom: 60rpx;
+}
+
+.text-bock-content{
+  margin-top: 20rpx;
+}
+
+.text-bock-content > text{
+  display: block;
+  font-size: 28rpx;
+  color:#575757;
+  padding: 40rpx 80rpx;
+}

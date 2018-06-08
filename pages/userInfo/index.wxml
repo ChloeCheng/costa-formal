@@ -1,0 +1,118 @@
+<!--pages/userInfo/index.wxml-->
+<bar active="true" currentData="{{currentDataTotal}}"></bar>
+<view class="center-title">
+  <text>{{currentData.title}}</text>
+</view>
+
+<!--用户名-->
+<view class="content-block">
+  <view class="input-block">
+    <view class="input-icon">
+      <image class="big-image"  mode='aspectFit' src='../../assets/userInfo/username.png' />
+      <text class='require'>({{currentData.requireType}})</text>
+    </view>
+    <view class="input-ct">
+      <input bindinput="bindUserNameInput" value='{{name}}'></input>
+    </view>
+  </view>
+<!--手机号-->
+  <view class="input-block">
+    <view class="input-icon">
+      <image class="big-image"  mode='aspectFit' src='../../assets/userInfo/username.png' />
+      <text class='require'>({{currentData.requireType}})</text>
+    </view>
+    <view class="input-ct">
+      {{mobile}}
+    </view>
+  </view>
+  <!--日期-->
+  <view class="input-block">
+    <view class="input-icon">
+      <image class="big-image"  mode='aspectFit' src='../../assets/userInfo/day.png' />
+      <text class='require'>({{currentData.requireType}})</text>
+    </view>
+    <view class="input-ct">
+      {{birthday}}
+    </view>
+  </view>
+
+  <!--性别-->
+  <view class="input-block">
+    <view class="input-icon">
+      <image class="big-image" mode='aspectFit' src='../../assets/userInfo/sex.png' />
+      <text class='require'>({{currentData.requireType}})</text>
+    </view>
+    <view class="input-ct">
+      <picker bindchange="bindSexChange" value="0" range="{{currentData.sex}}">
+        {{gender}}
+        <image class="small-image" mode='aspectFit' src='../../assets/userInfo/down.png' />
+      </picker>
+    </view>
+  </view>
+
+  <!--地点-->
+  <view class="input-block">
+    <view class="input-icon">
+      <image class="big-image"  mode='aspectFit' src='../../assets/userInfo/city.png' />
+      <text>({{currentData.selectType}})</text>
+    </view>
+    <view class="input-ct">
+      <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range-key="{{item.name}}" range="{{multiArray}}">
+        <view class="picker">
+          {{multiArray[0][multiIndex[0]]}}-{{multiArray[1][multiIndex[1]]}}
+          <image class="small-image" mode='aspectFit' src='../../assets/userInfo/down.png' />
+        </view>
+      </picker>
+    </view>
+
+  </view>
+
+  <!--公司-->
+  <view class="input-block">
+    <view class="input-icon">
+      <image class="big-image"  mode='aspectFit' src='../../assets/userInfo/company.png' />
+      <text>({{currentData.selectType}})</text>
+    </view>
+    <view class="input-ct">
+      <input bindinput="bindCompanyInput" placeholder="{{currentData.company}}" value="{{company}}"></input>
+    </view>
+  </view>
+
+  <!--职位-->
+  <view class="input-block">
+    <view class="input-icon">
+      <image class="big-image"  mode='aspectFit' src='../../assets/userInfo/position.png' />
+      <text>({{currentData.selectType}})</text>
+    </view>
+    <view class="input-ct">
+      <input bindinput="bindPositionInput" value="{{position}}" placeholder="{{currentData.position}}"></input>
+    </view>
+  </view>
+
+  <view class="label-block">
+    <view>
+      <text class='title'>{{currentData.subTitle}}</text>
+      <text class='select'>({{currentData.selectsType}})</text>
+    </view>
+    <view>
+      <text class='tips'>({{currentData.tips}})</text>
+    </view>
+  </view>
+
+  <view class='radiu-block'>
+    <view class="inline-block" wx:key="unique" wx:for="{{items}}">
+      <label class="{{item.checked?'checkbox checked':'checkbox'}}" data-id="{{item.id}}" bindtap='toggleCheck'>
+        <text class='radiu-icon'></text> {{item.name}}
+      </label>
+    </view>
+  </view>
+  <button type="default" hover-class="none" bindtap='submit'> {{currentData.btnTxt}}</button>
+
+</view>
+
+
+
+
+
+
+<zan-dialog id="zan-dialog-test"></zan-dialog>

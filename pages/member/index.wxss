@@ -1,0 +1,117 @@
+/* pages/points/index.wxss */
+.body{
+  padding: 20rpx 40rpx 120rpx 40rpx;
+}
+.title{
+  font-size: 34rpx;
+  color: #AC001F;
+  font-weight: bold;
+  display: block;
+  text-align: center;
+}
+
+.body > image {
+  width:100%;
+  height:320rpx;
+  margin-top:20rpx;
+}
+
+.text-content{
+   font-size: 20rpx;
+   color:7A8288;
+   padding: 0 30rpx 40rpx 30rpx;
+}
+.text-content > text{
+  display: block;
+}
+
+.text-content text.small{
+  font-size: 18rpx;
+  display: block;
+  margin-left:20rpx;
+}
+
+.card {
+  position: relative;
+  margin-bottom:60rpx;
+}
+.card-bg{
+  position: absolute;
+  right:0;
+  top:-4rpx;
+  z-index:-1;
+  width:450rpx;
+  height:115rpx;
+
+}
+.card-icon{
+  width:140rpx;
+  height:140rpx;
+  position: absolute;
+  top:-6rpx;
+  left:50rpx;
+  z-index:2;
+}
+.card-list{
+  padding-top:160rpx;
+}
+.card-list-col-1{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.row{
+  flex:1;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.row image{
+  width:64rpx;
+  height:64rpx;
+  margin:0 20rpx 0 30rpx;
+}
+.text-block{
+  flex: 1;
+}
+.text-block > text{
+  font-size: 18rpx;
+  display:inline-block;
+  padding:20rpx 0;
+}
+
+.card-3 .gold-text{
+  font-size: 20rpx;
+  color:#DFC45F;
+  font-weight: bold;
+}
+
+.card-2 .gold-text{
+  font-size: 20rpx;
+  color:#9A9A9A;
+  font-weight: bold;
+}
+
+.card-1 .gold-text{
+  font-size: 20rpx;
+  color:#AE0004;
+  font-weight: bold;
+}
+
+.card-3 {
+  border: 1px solid #DFC45F;
+  border-radius:10rpx;
+  padding-bottom:20rpx;
+}
+
+.card-2{
+  border: 1px solid #9A9A9A;
+  border-radius:10rpx;
+  padding-bottom:20rpx;
+}
+
+.card-1 {
+  border: 1px solid #AE0004;
+  border-radius:10rpx;
+}

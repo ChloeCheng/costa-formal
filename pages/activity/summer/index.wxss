@@ -1,0 +1,162 @@
+/* pages/points/index.wxss */
+.body{
+  padding: 20rpx 24rpx 0 24rpx;
+}
+.title{
+  color: #b28862;
+  font-size: 90rpx;
+  font-weight: bold;
+  text-align: center;
+  display: block;
+  padding:40rpx 0 0 0;
+}
+.bg-image{
+  width:100%;
+  height:100vh;
+  position:fixed;
+  z-index:-1;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+}
+.bg-image > image{
+  width: 100%;
+  height: 100%;
+}
+.summer-line{
+  position: relative;
+}
+.line{
+  width:100%;
+  height:100rpx;
+}
+.bean{
+  width:32rpx;
+  height:32rpx;
+  position: absolute;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.desc{
+  margin-bottom: 40rpx;
+}
+.desc text{
+  display: block;
+  text-align: center;
+  color:#b28862;
+  font-size: 26rpx;
+}
+
+.desc text.big{
+  font-size: 32rpx;
+  margin-bottom: 20rpx;
+}
+
+.intr{
+  width: 660rpx;
+  height:800rpx;
+  background: rgba(255,255,255,0.8);
+  border-radius: 20rpx;
+  margin: 40rpx auto 40rpx auto;
+
+}
+.intr image{
+  width:580rpx;
+  height:720rpx;
+  margin: 40rpx 30rpx;
+}
+.btn{
+  background:#b28862;
+  color:#fff;
+  width:380rpx;
+  height:80rpx;
+  line-height:80rpx;
+  font-size:34rpx;
+  margin:0 auto;
+  letter-spacing:8rpx;
+  font-weight:bold;
+
+}
+
+.text-desc{
+  padding: 40rpx 20rpx;
+}
+
+.text-desc text{
+  color:#4d4946;
+  font-size: 28rpx;
+  display: block;
+  margin: 10rpx 0;
+  
+}
+.icons{
+  width:100%;
+  height:280rpx;
+  position: relative;
+  overflow: hidden;
+}
+.icon-bg{
+  position: absolute;
+  left: 0;
+  top:0rpx;
+  right:0;
+  bottom:0;
+  height:100%;
+  width: 100%;
+}
+.bean-type{
+  
+}
+
+.bean-type image{
+  width:64rpx;
+  height:64rpx;
+  position: absolute;
+}
+
+.bean-type image.big{
+  width:128rpx;
+  height:128rpx;
+}
+.type-1{
+  top:0rpx;
+  left:60rpx;
+}
+.type-2{
+  top:36rpx;
+  left:240rpx;
+}
+.type-3{
+  top:0rpx;
+  right:200rpx;
+}
+.type-4{
+  top:36rpx;
+  right:70rpx;
+}
+.type-5{
+  top:180rpx;
+left:60rpx;
+
+}
+.type-6{
+  top:148rpx;
+left:176rpx
+}
+.type-7{
+  top:180rpx;
+left:350rpx;
+
+} 
+.type-8{
+  top:180rpx;
+right:174rpx;
+
+}
+.type-9{
+  top:148rpx;
+ right:10rpx;
+
+}

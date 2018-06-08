@@ -1,0 +1,46 @@
+/* pages/activity/redeem/index.wxss */
+
+.center-title{
+  font-size: 32rpx;
+  color: #a5002a;
+  text-align: center;
+  font-weight: bold;
+}
+
+.images-list{
+  width: 90%;
+  margin: 30rpx auto;
+  border-radius: 50rpx;
+  text-align:center;
+
+}
+.images-item{
+margin: 10rpx auto;
+}
+.images-list image{
+ height:240rpx;
+ border-radius:10rpx;
+ width:100%;
+}
+.block-bottom{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom:140rpx;
+}
+.block-bottom image{
+  width: 100rpx;
+  height: 100rpx;
+}
+.block-bottom-txt{
+  display: flex;
+  flex-direction: column;
+  margin-left: 10rpx;
+}
+.block-bottom-txt .tips{
+  font-size: 20rpx;
+  color: #535c64;
+}
+.block-bottom-txt .txt{
+  font-size: 36rpx;
+}

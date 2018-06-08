@@ -1,0 +1,24 @@
+<!--pages/activity/redeem/index.wxml-->
+<bar active="true"></bar>
+<view class="center-title">
+  <text>{{currentData.redeem.title}}</text>
+</view>
+<!-- <view class="images-list">
+  <view class="images-item" wx:for="{{[1,2,3,4]}}" wx:key="unique">
+     <image mode='aspectFit' src="{{'../../../assets/activity/'+item + '.png'}}" mode='aspectFill'/>
+  </view>
+</view> -->
+
+<view class="images-list">
+  <view class="images-item" wx:for="{{list}}" wx:key="unique">
+     <image mode='aspectFit' src="{{hostUrl+item.img}}" mode='aspectFill'/>
+  </view>
+</view>
+
+  <view class="block-bottom" >
+     <image mode='aspectFit' src='../../../assets/activity/logo.png' mode='aspectFill'/>
+     <view  class="block-bottom-txt" >
+       <text class="tips">{{currentData.redeem.tips}}</text>
+       <text class="txt">{{currentData.redeem.txt}}</text>
+     </view>
+  </view>

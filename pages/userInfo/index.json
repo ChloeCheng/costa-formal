@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "bar": "../../components/bar/bar",
+    "zan-dialog": "../../components/vendor/dist/dialog/index"
+  }
+}

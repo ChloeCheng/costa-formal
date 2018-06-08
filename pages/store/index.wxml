@@ -1,0 +1,41 @@
+<view class="store-head">
+   <text class="store-title">{{currentData.title}}</text>
+   <view class="store-location">
+     <text class="store-text">{{currentData.nearby}} </text>
+     <image src="../../assets/store/logo.png" mode='aspectFit' class="store-logo"></image>
+     <image src="../../assets/store/location.png" mode='aspectFit'  class="store-location-png"></image>
+     <text  class="store-location-city">
+       {{city}}
+     </text>
+   </view>
+  <view class="store-search">
+    <input placeholder="{{currentData.search}}" mode="{{inputValue}}" bindinput="bindKeyInput"></input>
+    <view class="store-icon" bindtap="searchListByKey"> 
+     <image src="../../assets/store/search.png" mode='aspectFit'></image>
+    </view>
+  </view>
+</view>
+
+<view class="store-list">
+    <view class="store-item" bindtap="openLocation"  wx:for="{{list}}" wx:key="{{item.index}}" data-item="{{item}}">
+      <image src="../../assets/store/store_logo.png" mode='aspectFit'></image>
+      <view class="store-item-ad">
+         <text class="store-item-ad-title">{{item.name}}</text>
+         <text>{{item.address}}</text>
+         <text>{{item.phone}}</text>
+      </view> 
+      <view class="store-item-distance">
+        <text>{{item.distance}}km</text>
+      </view>
+    </view>
+</view>
+
+<view class="authorize-cover" wx-if="{{!authorizeLocation}}"></view>
+<view class="authorize-dialog" wx-if="{{!authorizeLocation}}">
+      <text>检测到您未打开微信定位授权，开启后即可进行操作</text>
+      <view>
+        <button class="u-login-wx" type="primary" open-type="openSetting" bindopensetting="getSettingInfo" hover-class="none">去开启</button>
+      </view>
+</view>
+
+<bar currentData="{{currentDataTotal}}"></bar>
