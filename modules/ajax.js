@@ -68,9 +68,9 @@ function checkRequest(url, param = {}, success, failed, complete) {
   if (url.indexOf('http') == -1) {
     url = hostUrl + url
   }
-  wx.showLoading({
-    title: 'loading'
-  })
+  // wx.showLoading({
+  //   title: 'loading'
+  // })
   param.language = wx.getStorageSync('language') == 'en' ? 'en' : 'cn'
   wx.request({
     url: url,
@@ -110,9 +110,9 @@ function checkRequest(url, param = {}, success, failed, complete) {
     },
     complete: function (res) {
       complete && complete(res);
-      wx.hideLoading({
-        title: 'loading'
-      })
+      // wx.hideLoading({
+      //   title: 'loading'
+      // })
     }
   });
 }
