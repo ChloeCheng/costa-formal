@@ -31,9 +31,9 @@ Component({
         handleBannerItemTap: function(e){
            let url = e.currentTarget.dataset.bannerItem.url;
            if(url){
-             url = '/pages/activity/summer/index' // getApp().global.hostUrl + url;
+             url = getApp().global.hostUrl + url;  //'/pages/activity/summer/index'
              wx.navigateTo({
-                url: url // ('/pages/special/special?url=' + url)
+                url: ('/pages/special/special?url=' + url)
               })
            } 
         }
