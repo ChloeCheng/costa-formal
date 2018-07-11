@@ -11,7 +11,7 @@
   <text class="share-tips" wx:if="{{shareType == 3}}">{{currentData.tips}}</text>
   <text class="share-tips" wx:if="{{shareType == 4}}">{{currentData.tipsNone}}</text>
   <text class="share-tips" wx:if="{{shareType == 7}}">{{currentData.tipsPastDue}}</text>
-   <view>
+   <view style="margin-bottom: 4rpx; overflow:hidden; padding:0 40rpx;">
     <image mode='aspectFit' src='../../assets/card_explain.png'></image>
   </view>
   <text class="title">{{detail.name}}</text>

@@ -27,9 +27,10 @@
 }
 .content image{
   width: 340rpx;
-  height:500rpx;
+  height:290rpx;
   position:relative;
   left:40rpx;
+  top: -26rpx;
 }
 .content .title{
   font-size: 36rpx;
@@ -101,6 +102,5 @@
   font-size: 24rpx;
   color:#fff;
   display: block;
-  width:420rpx;
   margin: 0 auto;
 }
