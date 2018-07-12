@@ -33,7 +33,7 @@ Component({
            if(url){
              url = getApp().global.h5HostUrl + url;  //'/pages/activity/summer/index'
              wx.navigateTo({
-                url: ('/pages/special/special?url=' + url)
+                url: ('/pages/special/special?url=' + encodeURIComponent(url))
               })
            } 
         }
