@@ -3,18 +3,12 @@ const login = require('../../modules/login.js');
 const URL = require('../../modules/api-list.js');
 const ajax = require('../../modules/ajax.js');
 const QRCode = require('../../common/qrcode.js');
-
+const userInfo = wx.getStorageSync('userInfo')
 Page({
   data: {
-    bannerList: [{
-      "image": "https:\/\/miniprogrampicture.costa.net.cn\/u\/1804\/2018042316385234.jpg",
-      "url": "\/pages\/activity\/summer\/index"
-    }, {
-      "image": "https:\/\/miniprogrampicture.costa.net.cn\/banner_1.png",
-      "url": ""
-    }],
+    bannerList: [{ "summary": "开业当天任意消费，即送新年贺卡期待您的光临", "img": "https://miniprogramapi.costa.net.cn//default/upload/banner-1.jpg", "banner": true, "title": "上海大宁国际广场店开业啦～", "content": "", "url": "", "released": 1525917600000 }, { "summary": "夏季第一波好礼诚意上线，喝夏日新品享积杯精美好礼，快到COSTA门店参与吧~", "img": "https://miniprogramapi.costa.net.cn//default/upload/banner-3.jpg", "banner": true, "title": "积杯有礼", "content": "", "url": "/wechat/jibei?scheme=https", "released": 1525921200000 }],
     authorizeUserInfo: false,
-    userInfo: {},
+    userInfo: userInfo,
     currentLanguage: app.global.currentLanguage || 'zh',
     showCode: false,
     showPhone: false,
@@ -28,6 +22,7 @@ Page({
     wx.getUserInfo({
       success: function(res) {
           getApp().global.wxUserInfo = res.userInfo;
+          wx.setStorageSync('userInfo', res.userInfo)
           _this.setData({
             'userInfo': res.userInfo,
             hideDialog: true
@@ -40,6 +35,8 @@ Page({
   initPage(noInit){
     let _this = this;
     let url = `${URL.default.home.userInfo}`;
+    // let indexUrl = '/wechat-mp/customer/get-index?language=cn'
+    // ajax.request(indexUrl)
     ajax.request(
       url,
       {},
@@ -65,6 +62,10 @@ Page({
         }
       }
      )
+  
+  
+  
+  
   },
   getBanner(){
     let _this = this;
@@ -78,6 +79,7 @@ Page({
           tmp.forEach(item=>{
             item.img = `${app.global.host}${item.img}`;
           });
+          console.log(tmp)
           _this.setData({
             'bannerList': tmp
           });

@@ -1,4 +1,9 @@
 
+
+// { "code":200, "data":[{ "summary": "开业当天任意消费，即送新年贺卡期待您的光临", "img": "/default/upload/banner-1.jpg", "banner": true, "title": "上海大宁国际广场店开业啦～", "content": "", "url": "", "released": 1525917600000 }, { "summary": "夏季第一波好礼诚意上线，喝夏日新品享积杯精美好礼，快到COSTA门店参与吧~", "img": "/default/upload/banner-3.jpg", "banner": true, "title": "积杯有礼", "content": "", "url": "/wechat/jibei?scheme=https", "released": 1525921200000 }], "message":"成功" }
+
+
+
 Component({
     /**
      * 组件的属性列表

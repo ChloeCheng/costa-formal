@@ -82,8 +82,9 @@ function checkRequest(url, param = {}, success, failed, complete) {
       if (res.statusCode == 200) {
         var data = JSON.parse(res.data)
         if (url.indexOf('wechat-mp/oauth') > -1&&data.code==200) {
-          if (res.header['Set-Cookie']) {
-            wx.setStorageSync('JSESSIONID', res.header['Set-Cookie'])
+          var cookieValue = res.header['Set-Cookie'] || res.header['set-cookie']
+          if (cookieValue) {
+            wx.setStorageSync('JSESSIONID', cookieValue)
             wx.setStorageSync('JSESSIONID_EXPIRED', (new Date()).getTime())
           }
         }

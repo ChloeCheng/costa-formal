@@ -4,6 +4,7 @@ const ajax = require('./ajax.js')
 const getUrl = require('./getPageUrl.js')
 const dateFormat = require('./dateFormat.js')
 const app = getApp()
+var isLogining = false
 
 // 入口统一是否登录判断
 exports.checkLogin = function (callback = () => { }) {
@@ -63,6 +64,10 @@ function login(option) {
 }
 
 function thirdLogin(code, encryptedData, iv, data) {
+  if (isLogining){
+    return
+  }
+  isLogining = true
   ajax.request(
     '/wechat-mp/oauth/' + encodeURIComponent(code),
     {
@@ -89,6 +94,15 @@ function thirdLogin(code, encryptedData, iv, data) {
           content: json.message || '登录失败',
         })
       }
+    },
+    function(){
+      
+    }
+    ,
+    function(){
+      setTimeout(function(){
+        isLogining = false;
+      },10000)
     }
   )
 

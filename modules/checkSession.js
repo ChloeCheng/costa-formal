@@ -20,6 +20,6 @@ exports.checkExpired = function (url,callback) {
         clearInterval(flag)
         callback()
       }
-    }, 300)
+    }, 100)
   }
 }
