@@ -194,7 +194,7 @@
 
 .ipt-label input {
   padding-left: 10rpx;
-  color: #e0e0e0;
+  color: #535c64;
 }
 
 .line-v {

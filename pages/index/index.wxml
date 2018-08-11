@@ -5,60 +5,60 @@
 </view>
 <view class="user-info">
   <view class="user-info-content">
-      <view  class="avatar-url"  bindtap='gotoEdit'>
-        <image class="avatar-image" src="{{userInfo.avatarUrl}}" mode='aspectFit'></image>
-        <image class="avatar-bg" src="{{showData.next_id==3?'../../assets/bg-headimg-silver.png':(showData.next_id==0?'../../assets/bg-headimg-gold.png':'')}}" mode='aspectFit'></image>
-      </view>
-      
-      <view class="user-info-detail">
-        <view class="col-1">
-          <text class="col-1-title">{{showData.name || userInfo.nickName}}</text>
-          <view class="col-1-opeater" bindtap='gotoEdit'>
-             <image src="../../assets/edit.png" mode='aspectFit'></image>
-              <text class="col-1-edit">{{currentData.edit}}</text>
-          </view>
+    <view class="avatar-url" bindtap='gotoEdit'>
+      <image class="avatar-image" src="{{userInfo.avatarUrl}}" mode='aspectFit'></image>
+      <image class="avatar-bg" src="{{showData.next_id==3?'../../assets/bg-headimg-silver.png':(showData.next_id==0?'../../assets/bg-headimg-gold.png':'')}}" mode='aspectFit'></image>
+    </view>
+
+    <view class="user-info-detail">
+      <view class="col-1">
+        <text class="col-1-title">{{showData.name || userInfo.nickName}}</text>
+        <view class="col-1-opeater" bindtap='gotoEdit'>
+          <image src="../../assets/edit.png" mode='aspectFit'></image>
+          <text class="col-1-edit">{{currentData.edit}}</text>
         </view>
-        <text class="col-2 {{showData.next_id==3?'col-silver':(showData.next_id==0?'col-gold':'')}}">{{showData.level}}</text>
-        <view class="col-3">
-           <text class="col-3-point"><text>{{showData.usable_total}}</text>{{currentData.points}}</text>
-           <text class="small-text" wx-if="{{!(currentLanguage!=='zh' || showData.next_id==0)}}">{{showData.hint_front}}<text>{{showData.pointValue}}</text>{{showData.hint_behind}}</text>
-        </view>
-       
       </view>
-      <view  class="code-url" bindtap="codeOperater">
-        <image src="../../assets/code.png"  class="" mode='aspectFit'></image>
+      <text class="col-2 {{showData.next_id==3?'col-silver':(showData.next_id==0?'col-gold':'')}}">{{showData.level}}</text>
+      <view class="col-3">
+        <text class="col-3-point"><text>{{showData.usable_total}}</text>{{currentData.points}}</text>
+        <text class="small-text" wx-if="{{!(currentLanguage!=='zh' || showData.next_id==0)}}">{{showData.hint_front}}<text>{{showData.pointValue}}</text>{{showData.hint_behind}}</text>
       </view>
+
+    </view>
+    <view class="code-url" bindtap="codeOperater">
+      <image src="../../assets/code.png" class="" mode='aspectFit'></image>
+    </view>
   </view>
   <view class="icon-list">
     <view class="icon-list-col-1">
       <view class="icon-list-col-block" bindtap="gotoPoint">
-         <image src="../../assets/point.png" mode='aspectFit'></image>
-         <view  wx:if="{{showData.remind_point}}" class="new-point"></view>
-         <text>{{currentData.myPoint}}</text>
+        <image src="../../assets/point.png" mode='aspectFit'></image>
+        <view wx:if="{{showData.remind_point}}" class="new-point"></view>
+        <text>{{currentData.myPoint}}</text>
       </view>
       <view class="icon-list-col-block" bindtap="gotoPage" data-detail='/pages/card/index'>
-         <image src="../../assets/card.png" mode='aspectFit'></image>
-         <view  wx:if="{{showData.remind_coupon}}" class="new-point"></view>
-         <text>{{currentData.myCard}}</text>
+        <image src="../../assets/card.png" mode='aspectFit'></image>
+        <view wx:if="{{showData.remind_coupon}}" class="new-point"></view>
+        <text>{{currentData.myCard}}</text>
       </view>
       <view class="icon-list-col-block" bindtap="gotoPromotion">
-         <image src="../../assets/activity.png" mode='aspectFit'></image>
-         <view  wx:if="{{showData.remind_campaign}}" class="new-point"></view>
-         <text>{{currentData.activity}}</text>
+        <image src="../../assets/activity.png" mode='aspectFit'></image>
+        <view wx:if="{{showData.remind_campaign}}" class="new-point"></view>
+        <text>{{currentData.activity}}</text>
       </view>
     </view>
     <view class="icon-list-col-2">
       <view class="icon-list-col-block" bindtap="gotoPage" data-detail='/pages/member/index'>
-         <image src="../../assets/vip.png" mode='aspectFit'></image>
-         <text>{{currentData.member}}</text>
+        <image src="../../assets/vip.png" mode='aspectFit'></image>
+        <text>{{currentData.member}}</text>
       </view>
       <view class="icon-list-col-block" bindtap="gotoPage" data-detail='/pages/store/index'>
-         <image src="../../assets/store.png" mode='aspectFit'></image>
-         <text>{{currentData.store}}</text>
+        <image src="../../assets/store.png" mode='aspectFit'></image>
+        <text>{{currentData.store}}</text>
       </view>
       <view class="icon-list-col-block" bindtap="showPhone">
-         <image src="../../assets/service.png" mode='aspectFit'></image>
-         <text>{{currentData.contactUs}}</text>
+        <image src="../../assets/service.png" mode='aspectFit'></image>
+        <text>{{currentData.contactUs}}</text>
       </view>
     </view>
     <view class="code-view" style="z-index:{{showCode? '11': '-1'}}">
@@ -67,9 +67,13 @@
         <text>{{currentData.pickUp}}</text>
       </view>
       <view class="clear"></view>
-      <!--image src="../../assets/91806-01865685.png" mode='aspectFit'></image-->
-      <view class="canvas-cover"  style="opacity:{{showCode? '1': '0'}}">
-        <canvas class='canvas' canvas-id='canvas'   style="display:{{showCode? 'block': 'none'}}"></canvas>
+      <view class="canvas-cover" style="opacity:{{showCode? '1': '0'}}">
+        <view wx-if="{{showData.vipcodeBase64}}">
+          <image src="{{showData.vipcodeBase64}}" mode='aspectFit'></image>
+        </view>
+        <view wx-if="{{!showData.vipcodeBase64}}">
+          <canvas class='canvas' canvas-id='canvas' style="display:{{showCode? 'block': 'none'}}"></canvas>
+        </view>
       </view>
       <text>{{currentData.codeDesc}}</text>
     </view>
@@ -78,20 +82,19 @@
 
 <view class="dialog-cover" wx-if="{{showPhone}}"></view>
 <view class="dialog" wx-if="{{showPhone}}">
-      <text class="dialog-title">{{currentData.contactUsForTel}}</text>
-      <view class="dialog-content">
-        <text class="">{{currentData.serviceTel}} <text class="bold">400-060-1971</text></text>
-        <text class="">{{currentData.serviceTime}} {{currentData.serviceTimeDetail}}<text class="bold">9:00-21:00</text></text>
-      </view>
-     
-      <view class="dialog-btns">
-          <button class="u-login-wx" bindtap="showPhone">{{currentData.close}}</button>
-          <button class="u-login-wx" bindtap="callPhone">
-            <image src="../../assets/tel.png" mode='aspectFit'></image>
-          </button>
+  <text class="dialog-title">{{currentData.contactUsForTel}}</text>
+  <view class="dialog-content">
+    <text class="">{{currentData.serviceTel}} <text class="bold">400-060-1971</text></text>
+    <text class="">{{currentData.serviceTime}} {{currentData.serviceTimeDetail}}<text class="bold">9:00-21:00</text></text>
+  </view>
 
-      </view>
+  <view class="dialog-btns">
+    <button class="u-login-wx" bindtap="showPhone">{{currentData.close}}</button>
+    <button class="u-login-wx" bindtap="callPhone">
+      <image src="../../assets/tel.png" mode='aspectFit'></image>
+    </button>
+
+  </view>
 </view>
 
 <bar active="true" currentData="{{currentBarDate}}"></bar>
-

@@ -295,6 +295,10 @@ top:-46rpx;
   display: inline-block;
   margin: 0 auto;
 }
+.canvas-cover image{
+  width:130px;
+  height: 130px;
+}
 canvas{
   width: 130px;
   height:130px;

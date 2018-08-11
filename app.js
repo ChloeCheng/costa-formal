@@ -16,7 +16,7 @@ App({
         cardlevel2: '银卡会员',
         cardlevel3: '金卡会员',
         myPoint: '我的积分',
-        myCard: '我的卡券',
+        myCard: '我的礼券',
         activity: '最新活动',
         member: '会员权益',
         store: '门店查询',
