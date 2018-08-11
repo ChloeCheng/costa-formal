@@ -3,6 +3,7 @@ const app = getApp()
 const date = require('../../modules/dateFormat.js');
 const ajax = require('./_modules.js')
 const login = require('../../modules/login.js');
+const getPageUrl = require('../../modules/getPageUrl.js'); //getCurrentPageArgs
 Page({
 
   /**
@@ -90,6 +91,7 @@ Page({
     })
   },
   gotoLogin() {
+    var currentPageArgs = getPageUrl.getCurrentPageArgs()
     if (this.data.tel == "") {
       wx.showModal({
         showCancel: false,
@@ -110,7 +112,8 @@ Page({
       ajax.register({
         'mobile': this.data.tel,
         'code': this.data.code,
-        'birthday': this.data.date
+        'birthday': this.data.date,
+        'hash': currentPageArgs.hash || '',
       })
     }
   },

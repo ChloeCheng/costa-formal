@@ -173,10 +173,10 @@
 					"query": ""
 				},
 				{
-					"id": -1,
+					"id": 23,
 					"name": "shareCard",
 					"pathName": "pages/shareCard/index",
-					"query": "id=6226589"
+					"query": "id=6226589&hash=132"
 				},
 				{
 					"id": -1,
@@ -257,10 +257,10 @@
 					"query": "pointHash=gmgxwawywsulggtjkfbzaxdujlvgdobo&isShared=1"
 				},
 				{
-					"id": -1,
+					"id": 37,
 					"name": "login",
 					"pathName": "pages/login/index",
-					"query": ""
+					"query": "hash=232314"
 				},
 				{
 					"id": -1,

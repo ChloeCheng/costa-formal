@@ -27,11 +27,13 @@ function goRegister(callback) {
   if (is_registered == 'false') {
     // 未注册
     var callbackUrl = wx.getStorageSync('callbackUrl')
+    var option = getUrl.paramStr2paramObj(callbackUrl)
+    var hash = option.hash || ''
     if (callbackUrl.includes('pages/login/index')) {
       return
     }
     wx.reLaunch({
-      url: '/pages/login/index?callbackUrl=' + encodeURIComponent(callbackUrl)
+      url: `/pages/login/index?hash=${hash}=callbackUrl=` + encodeURIComponent(callbackUrl)
     })
   }
   callback && callback()

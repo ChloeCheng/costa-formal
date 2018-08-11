@@ -17,6 +17,7 @@
   <text class="title">{{detail.name}}</text>
   <text class="sub-title marginTop">{{detail.summary}}</text>
   <text class="sub-title-time">有效期：{{detail.time}}</text>
+  <text class="sub-title-time marginTop">{{detail.code}}</text>  
   <view class="card-explain" wx:if="{{(detail.content.length !== 0) && noShareExplain}}">
      <view>
         <text class="explain-title">优惠券说明</text>

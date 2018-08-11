@@ -4,9 +4,10 @@ const URL = require('../../modules/api-list.js');
 const ajax = require('../../modules/ajax.js');
 const QRCode = require('../../common/qrcode.js');
 const userInfo ={};// wx.getStorageSync('userInfo')
+const bannerList = wx.getStorageSync('bannerList') || [{ "summary": "开业当天任意消费，即送新年贺卡期待您的光临", "img": "https://miniprogramapi.costa.net.cn//default/upload/banner-1.jpg", "banner": true, "title": "上海大宁国际广场店开业啦～", "content": "", "url": "", "released": 1525917600000 }];
 Page({
   data: {
-    bannerList: [{ "summary": "开业当天任意消费，即送新年贺卡期待您的光临", "img": "https://miniprogramapi.costa.net.cn//default/upload/banner-1.jpg", "banner": true, "title": "上海大宁国际广场店开业啦～", "content": "", "url": "", "released": 1525917600000 }, { "summary": "夏季第一波好礼诚意上线，喝夏日新品享积杯精美好礼，快到COSTA门店参与吧~", "img": "https://miniprogramapi.costa.net.cn//default/upload/banner-3.jpg", "banner": true, "title": "积杯有礼", "content": "", "url": "/wechat/jibei?scheme=https", "released": 1525921200000 }],
+    bannerList: bannerList,
     authorizeUserInfo: false,
     userInfo: userInfo,
     currentLanguage: app.global.currentLanguage || 'zh',
@@ -59,6 +60,7 @@ Page({
             'showData': tmp,
             showCode: false
           });
+          wx.setStorageSync('bannerList', tmp)
         }
       }
      )

@@ -39,3 +39,38 @@ exports.getCallbackUrl = function() {
   var options = currentPage.options || {}  //如果要获取url中所带的参数可以查看options
   return decodeURIComponent(options.callbackUrl) || '/pages/index/index'
 }
+
+
+export function paramStr2paramObj(url) {
+  var search = decodeURIComponent(url)
+    .replace(/^\s+/, '')
+    .replace(/\s+$/, '')
+    .match(/([^?#]*)(#.*)?$/); //提取location.search中'?'后面的部分
+  if (!search) {
+    return {};
+  }
+  var searchStr = search[1];
+  var searchHash = searchStr.split('&');
+
+  var ret = {};
+  for (var i = 0, len = searchHash.length; i < len; i++) {
+    //这里可以调用each方法
+    var pair = searchHash[i];
+    if ((pair = pair.split('='))[0]) {
+      var key = pair.shift();
+      var value = pair.length > 1 ? pair.join('=') : pair[0];
+      if (value != undefined) {
+        value = value;
+      }
+      if (key in ret) {
+        if (ret[key].constructor != Array) {
+          ret[key] = [ret[key]];
+        }
+        ret[key].push(value);
+      } else {
+        ret[key] = value;
+      }
+    }
+  }
+  return ret;
+}
