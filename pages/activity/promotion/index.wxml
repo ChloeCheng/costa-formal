@@ -2,17 +2,17 @@
 <view class="center-title">
   <text>{{currentBarDate.promotion.title}}</text>
 </view>
- <view class='block-radiu'>
+<view class='block-radiu'>
   <banner list="{{bannerList}}"></banner>
-</view> 
+</view>
 
 <bar active="true" currentData="{{currentBarDate}}"></bar>
 <view class="promotion-info" wx:for="{{crosswiseList}}" wx:key="{{index}}" bindtap="tapClick" data-bannerItem="{{item}}">
   <view>
-   <image mode='aspectFit' src='{{item.img}}'/>
-   </view>
-    <view class="info-block">
-      <text class="tips">{{item.title}}</text>
-      <text class="txt">{{item.summary}}</text>
-    </view>
+    <image mode='aspectFit' src='{{item.img}}' />
+  </view>
+  <view class="info-block">
+    <text class="tips">{{item.title}}</text>
+    <text class="txt">{{item.summary}}</text>
+  </view>
 </view>

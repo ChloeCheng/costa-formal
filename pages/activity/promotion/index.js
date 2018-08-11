@@ -16,24 +16,24 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.setData({ 
-      'currentBarDate': app.global[app.global['currentLanguage']] 
+    this.setData({
+      'currentBarDate': app.global[app.global['currentLanguage']]
     })
     this.getBanner();
   },
-  getBanner(){
+  getBanner() {
     let _this = this;
     let url = `${URL.default.home.bannerAll}`;
     ajax.request(
       url,
       {},
-      function(data){
-        if(data.code === 200) {
+      function (data) {
+        if (data.code === 200) {
           let tmp = data.data;
           let tmpa = [], tmpb = [];
-          tmp.forEach(item=>{
+          tmp.forEach(item => {
             item.img = `${app.global.host}${item.img}`;
-            if(item.banner){
+            if (item.banner) {
               tmpa.push(item);
             } else {
               tmpb.push(item);
@@ -45,16 +45,16 @@ Page({
           });
         }
       }
-     )
+    )
   },
-  tapClick(e){
+  tapClick(e) {
     let url = e.currentTarget.dataset.banneritem.url;
-    if(url){
-      url = '/pages/activity/summer/index' // getApp().global.hostUrl + url;
+    if (url) {
+      url = getApp().global.h5HostUrl + url;  //'/pages/activity/summer/index'
       wx.navigateTo({
-        url: url // ('/pages/special/special?url=' + url)
+        url: ('/pages/special/special?url=' + encodeURIComponent(url))
       })
-    } 
+    }
   },
 
   /**
