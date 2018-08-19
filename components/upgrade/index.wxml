@@ -1,0 +1,29 @@
+<view class="progress-cover" wx-if="{{isShow}}">
+  <view class="progress-dialog" wx-if="{{!isShowCover}}">
+    <view class="progress-block">
+      <view class='content-top'>
+        <view class='icon-logo'>
+          <image src="../../assets/costa-logo.png" class="" mode='aspectFit'></image>
+        </view>
+      </view>
+      <view class='des-text-block'>
+        <view class='des-text'>
+          尊敬的会员
+        </view>
+        <view class='des-text'>
+          COSTA会员中心现已升级
+        </view>
+      </view>
+
+      <view class='btn-detail'  bindtap='showCover'>
+        了解一下
+      </view>
+    </view>
+    <view class='icon-close' bindtap='hiddenDialogTrigger'>
+      <image src="../../assets/level/close.png" class="" mode='aspectFit'></image>
+    </view>
+  </view>
+  <view class='cover-image' wx-if="{{isShowCover}}" bindtap='hideCover'>
+     <image src="../../assets/level/cover.png" class="" mode='aspectFit'></image>
+  </view>
+</view>

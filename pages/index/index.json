@@ -2,6 +2,8 @@
   "usingComponents": {
     "banner": "../../components/banner/banner",
     "bar": "../../components/bar/bar",
-    "dialog": "../../components/dialog/dialog"
+    "dialog": "../../components/dialog/dialog",
+    "progress": "../../components/progress/progress",
+    "upgrade": "../../components/upgrade/index"
   }
 }

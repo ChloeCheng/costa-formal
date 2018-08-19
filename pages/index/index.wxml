@@ -1,4 +1,6 @@
 <dialog bind:info="updateInfo" hideDialog="{{hideDialog}}"></dialog>
+<progress info="{{showData}}" isShow="{{isShowLevelDialog}}"  bind:hiddenDialog="toggleLevelDialog"></progress>
+<upgrade info="{{showData}}" isShow="{{isShowUpgradeDialog}}"  bind:hiddenDialog="toggleUpgradeDialog"></upgrade>
 <banner list="{{bannerList}}"></banner>
 <view class="language-change" bindtap="changeLanguage">
   <image src="{{currentLanguage==='zh' ? '../../assets/en.png' : '../../assets/zh.png'}}" mode='aspectFit'></image>
@@ -13,10 +15,6 @@
     <view class="user-info-detail">
       <view class="col-1">
         <text class="col-1-title">{{showData.name || userInfo.nickName}}</text>
-        <view class="col-1-opeater" bindtap='gotoEdit'>
-          <image src="../../assets/edit.png" mode='aspectFit'></image>
-          <text class="col-1-edit">{{currentData.edit}}</text>
-        </view>
       </view>
       <text class="col-2 {{showData.next_id==3?'col-silver':(showData.next_id==0?'col-gold':'')}}">{{showData.level}}</text>
       <view class="col-3">
@@ -25,12 +23,19 @@
       </view>
 
     </view>
-    <view class="code-url" bindtap="codeOperater">
-      <image src="../../assets/code.png" class="" mode='aspectFit'></image>
+    <view class="code-url" bindtap="toggleLevelDialog">
+      <image wx-if="{{showData.next_id==0}}" src="../../assets/level/gold/logo.png" class="" mode='aspectFit'></image>
+      <image wx-if="{{showData.next_id==3}}" src="../../assets/level/sliver/logo.png" class="" mode='aspectFit'></image>
+      <image wx-if="{{showData.next_id==2}}" src="../../assets/level/red/logo.png" class="" mode='aspectFit'></image>
     </view>
   </view>
   <view class="icon-list">
     <view class="icon-list-col-1">
+      <view class="icon-list-col-block" bindtap="codeOperater">
+        <image src="../../assets/my-code.png" mode='aspectFit'></image>
+        <view wx:if="{{showData.remind_point}}" class="new-point"></view>
+        <text>{{currentData.myCode}}</text>
+      </view>
       <view class="icon-list-col-block" bindtap="gotoPoint">
         <image src="../../assets/point.png" mode='aspectFit'></image>
         <view wx:if="{{showData.remind_point}}" class="new-point"></view>
@@ -60,23 +65,30 @@
         <image src="../../assets/service.png" mode='aspectFit'></image>
         <text>{{currentData.contactUs}}</text>
       </view>
-    </view>
-    <view class="code-view" style="z-index:{{showCode? '11': '-1'}}">
-      <view class="code-pick-up" bindtap="codeOperater">
-        <image src="../../assets/card/card_active_up.png" mode='aspectFit'></image>
-        <text>{{currentData.pickUp}}</text>
+      <view class="icon-list-col-block" bindtap="gotoEdit">
+        <image src="../../assets/my-edit.png" mode='aspectFit'></image>
+        <text>{{currentData.edit}}</text>
       </view>
-      <view class="clear"></view>
-      <view class="canvas-cover" style="opacity:{{showCode? '1': '0'}}">
-        <view wx-if="{{showData.vipcodeBase64}}">
-          <image src="{{showData.vipcodeBase64}}" mode='aspectFit'></image>
-        </view>
-        <view wx-if="{{!showData.vipcodeBase64}}">
-          <canvas class='canvas' canvas-id='canvas' style="display:{{showCode? 'block': 'none'}}"></canvas>
-        </view>
-      </view>
-      <text>{{currentData.codeDesc}}</text>
     </view>
+    <view class="over-lay" style="display:{{showCode? 'block': 'none'}}">
+      <view class="code-view">
+        <view class="code-pick-up" bindtap="codeOperater">
+          <image src="../../assets/card/card_active_up.png" mode='aspectFit'></image>
+          <text>{{currentData.pickUp}}</text>
+        </view>
+        <view class="clear"></view>
+        <view class="canvas-cover" style="opacity:{{showCode? '1': '0'}}">
+          <view wx-if="{{showData.vipcodeBase64}}">
+            <image src="{{showData.vipcodeBase64}}" mode='aspectFit'></image>
+          </view>
+          <view wx-if="{{!showData.vipcodeBase64}}">
+            <canvas class='canvas' canvas-id='canvas' style="display:{{showCode? 'block': 'none'}}"></canvas>
+          </view>
+        </view>
+        <text>{{currentData.codeDesc}}</text>
+      </view>
+    </view>
+
   </view>
 </view>
 

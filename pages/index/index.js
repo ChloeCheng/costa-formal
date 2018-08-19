@@ -16,7 +16,9 @@ Page({
     currentData: app.global[app.global['currentLanguage']].home,
     currentBarDate: app.global[app.global['currentLanguage']],
     showData:{},
-    hideDialog: false
+    hideDialog: false,
+    isShowLevelDialog:false,
+    isShowUpgradeDialog: false,
   },
   onLoad: function () {
     let _this = this;
@@ -32,6 +34,13 @@ Page({
     })
     _this.initPage();
     _this.getBanner();
+  },
+  toggleLevelDialog(){
+    this.setData({ isShowLevelDialog: !this.data.isShowLevelDialog})
+  },
+  toggleUpgradeDialog() {
+    this.setData({ isShowUpgradeDialog: !this.data.isShowUpgradeDialog })
+    wx.setStorageSync('isShowUpgradeDialog', false) 
   },
   initPage(noInit){
     let _this = this;
@@ -57,9 +66,14 @@ Page({
               correctLevel: QRCode.CorrectLevel.H,
             });
           }
+          //next_id 2:红卡， 3:银卡， 0:金卡
+          //tmp.next_id=3; 
+          tmp.isShowUpgradeDialog = true;
+          tmp.num = 2;
           _this.setData({
             'showData': tmp,
-            showCode: false
+            showCode: false,
+            isShowUpgradeDialog: tmp.isShowUpgradeDialog
           });
           wx.setStorageSync('bannerList', tmp)
         }
