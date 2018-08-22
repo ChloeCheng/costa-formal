@@ -38,7 +38,9 @@ App({
         myCard: '我的礼券',
         more: '展开',
         pickUp: '收起',
-        expiredCoupons: '已失效',
+        expiredCoupons: '已过期',
+        sharedCoupons: '已分享',
+        usedCoupons: '已使用',
         validityTime: '有效期',
       },
       member: {
@@ -71,7 +73,7 @@ App({
         silver_1_1_1: '一年内累计',
         silver_1_1_2: '700积分\r\n',
         silver_1_1_3: '即刻成为',
-        silver_1_1_4: '金卡会员',
+        silver_1_1_4: '银卡会员',
         silver_1_2_1: '正价消费任意手工调制饮品独享',
         silver_1_2_2: '满12杯赠1杯',
         silver_2_1_1: '升级次日获得\r\n',
@@ -282,6 +284,8 @@ App({
         pickUp: 'pack up',
         expiredCoupons: 'Expired coupons * ',
         validityTime: 'Expiry date ',
+        sharedCoupons: 'Shared coupons *',
+        usedCoupons: 'Used coupons *',
       },
       promotion:{
         title:'Promotions'

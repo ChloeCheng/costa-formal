@@ -28,6 +28,58 @@
    </view>
 
    <view class="card-disable">
+      <view  class="card-disable-head" bindtap="sharedSpreadTap">
+         <view class="card-icon">
+            <image src="../../assets/card/card_shared.png" mode='aspectFit'></image>
+         </view>
+         <text class="card-num" wx:if="{{currentLanguage === 'zh'}}">{{currentData.sharedCoupons}}<text>{{sharedList.length}}</text>张</text>
+         <text class="card-num" wx:if="{{currentLanguage === 'en'}}">{{currentData.sharedCoupons}}<text>{{sharedList.length}}</text></text>
+         <view class="card-op">
+             <image src="{{sharedSpread?'../../assets/card/card_disable_up.png':'../../assets/card/card_disable_down.png'}}" mode='aspectFit'></image>
+             <text>{{sharedSpread?currentData.pickUp:currentData.more}}</text>
+         </view>
+      </view>
+      <view class="card-active-list" wx-if="{{disableSpread}}">
+        <view class="card-active-list-item"  wx:for="{{sharedList}}" wx:key="{{index}}">
+            <view class="card-icon-small">
+                <image src="{{item.icon ? ('../../assets/card/type_'+item.icon+'.png') : ''}}" mode='aspectFit'></image>
+            </view>
+            <view class="card-center">
+              <text class="card-center-title">{{item.name}}</text>
+              <text>{{item.summary}}</text>
+            </view>
+            <text class="card-list-time">{{currentData.validityTime}} {{item.time}}</text>
+        </view>
+      </view>
+   </view>
+
+   <view class="card-disable">
+      <view  class="card-disable-head" bindtap="usedSpreadTap">
+         <view class="card-icon">
+            <image src="../../assets/card/card_used.png" mode='aspectFit'></image>
+         </view>
+         <text class="card-num" wx:if="{{currentLanguage === 'zh'}}">{{currentData.usedCoupons}}<text>{{usedList.length}}</text>张</text>
+         <text class="card-num" wx:if="{{currentLanguage === 'en'}}">{{currentData.usedCoupons}}<text>{{usedList.length}}</text></text>
+         <view class="card-op">
+             <image src="{{usedSpread?'../../assets/card/card_disable_up.png':'../../assets/card/card_disable_down.png'}}" mode='aspectFit'></image>
+             <text>{{usedSpread?currentData.pickUp:currentData.more}}</text>
+         </view>
+      </view>
+      <view class="card-active-list" wx-if="{{disableSpread}}">
+        <view class="card-active-list-item"  wx:for="{{usedList}}" wx:key="{{index}}">
+            <view class="card-icon-small">
+                <image src="{{item.icon ? ('../../assets/card/type_'+item.icon+'.png') : ''}}" mode='aspectFit'></image>
+            </view>
+            <view class="card-center">
+              <text class="card-center-title">{{item.name}}</text>
+              <text>{{item.summary}}</text>
+            </view>
+            <text class="card-list-time">{{currentData.validityTime}} {{item.time}}</text>
+        </view>
+      </view>
+   </view>
+
+   <view class="card-disable">
       <view  class="card-disable-head" bindtap="disableSpreadTap">
          <view class="card-icon">
             <image src="../../assets/card/card_overtime.png" mode='aspectFit'></image>
@@ -52,4 +104,6 @@
         </view>
       </view>
    </view>
+
+   
 </view>
