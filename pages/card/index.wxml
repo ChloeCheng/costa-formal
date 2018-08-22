@@ -39,7 +39,7 @@
              <text>{{sharedSpread?currentData.pickUp:currentData.more}}</text>
          </view>
       </view>
-      <view class="card-active-list" wx-if="{{disableSpread}}">
+      <view class="card-active-list" wx-if="{{sharedSpread}}">
         <view class="card-active-list-item"  wx:for="{{sharedList}}" wx:key="{{index}}">
             <view class="card-icon-small">
                 <image src="{{item.icon ? ('../../assets/card/type_'+item.icon+'.png') : ''}}" mode='aspectFit'></image>
@@ -65,7 +65,7 @@
              <text>{{usedSpread?currentData.pickUp:currentData.more}}</text>
          </view>
       </view>
-      <view class="card-active-list" wx-if="{{disableSpread}}">
+      <view class="card-active-list" wx-if="{{usedSpread}}">
         <view class="card-active-list-item"  wx:for="{{usedList}}" wx:key="{{index}}">
             <view class="card-icon-small">
                 <image src="{{item.icon ? ('../../assets/card/type_'+item.icon+'.png') : ''}}" mode='aspectFit'></image>
