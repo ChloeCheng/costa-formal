@@ -74,7 +74,8 @@ Page({
   },
   goRedeem: function (e) {
     wx.navigateTo({
-      url: '/pages/activity/redeem/index'
+      //url: '/pages/activity/redeem/index'
+      url: ('/pages/special/special?url=' + encodeURIComponent('https://h5.costa.net.cn/wechat/point-exchange-coupon?scheme=https'))
     })
   },
   changeLanguage() {
