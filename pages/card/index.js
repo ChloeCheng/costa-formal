@@ -62,7 +62,7 @@ Page({
     // return {notExpired: [], expired: list};
     let notExpired = [], expired = [], sharedList = [], usedList = [],ts = Date.now();
     list.forEach(item=>{
-        // item.time = formatTime.formatTime(new Date(item.expired_time));
+        item.time = formatTime.formatTime(new Date(item.expired_time));
         // status 有效：1 已分享：3  已使用：4、5、-1   已过期：2
         if(item.status === 1){
           notExpired.push(item);
