@@ -14,8 +14,12 @@ Page({
     currentDataTotal: app.global[app.global['currentLanguage']],
     activeSpread: false,
     disableSpread: false,
+    sharedSpread: false,
+    usedSpread: false,
     notExpired: [],
-    expired: []
+    expired: [],
+    sharedList: [],
+    usedList: []
   },
 
   /**
@@ -39,10 +43,12 @@ Page({
       function(data){
         if(data.code === 200) {
           let tmp = data.data;
-          const {notExpired,expired} = _this.splitItemData(tmp);
+          const {notExpired,expired,sharedList,usedList} = _this.splitItemData(tmp);
           _this.setData({
             'notExpired': notExpired,
-            'expired': expired
+            'expired': expired,
+            'sharedList': sharedList,
+            'usedList': usedList
           });
         }
       }
@@ -54,23 +60,25 @@ Page({
    */
    splitItemData(list){
     // return {notExpired: [], expired: list};
-    let notExpired = [], expired = [], ts = Date.now();
+    let notExpired = [], expired = [], sharedList = [], usedList = [],ts = Date.now();
     list.forEach(item=>{
         item.time = formatTime.formatTime(new Date(item.expired_time));
-        if(item.expired_time>ts){
-            if(item.status === 1){
-              notExpired.push(item);
-            } else {
-              expired.push(item);
-            }
-            
-        } else {
-            expired.push(item);
-        }
+        // status 有效：1 已分享：3  已使用：4、5、-1   已过期：2
+        if(item.status === 1){
+          notExpired.push(item);
+        } else if(item.status === 2){
+          expired.push(item);
+        } else if(item.status === 3){
+          sharedList.push(item);
+        }else if(item.status === 4 || item.status === 5 || item.status === -1){
+          usedList.push(item);
+        }      
     });
     return {
         notExpired,
-        expired
+        expired,
+        sharedList,
+        usedList
     };
   },
   activeSpreadTap(){
@@ -83,6 +91,18 @@ Page({
     let value = this.data.disableSpread;
     this.setData({
       'disableSpread': !value
+    });
+  },
+  sharedSpreadTap(){
+    let value = this.data.sharedSpread;
+    this.setData({
+      'sharedSpread': !value
+    });
+  },
+  usedSpreadTap(){
+    let value = this.data.usedSpread;
+    this.setData({
+      'usedSpread': !value
     });
   },
   gotoDetail(event){
