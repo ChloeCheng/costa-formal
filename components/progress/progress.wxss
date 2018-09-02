@@ -102,6 +102,9 @@ button.u-login-wx::after {
 .des-text-block.text-gray{
   color:#888;
 }
+.des-text-block.text-gray-sliver{
+  color:#af9364;
+}
 .des-text-block text {
   display: inline-block;
   color: #a6002a;
@@ -116,6 +119,9 @@ button.u-login-wx::after {
   margin-top: 10px;
   padding: 2px 20px;
   background: rgba(0, 0, 0, 0.2);
+}
+.sliver-block .btn-detail{
+  background:#af9364;
 }
 
 .ct-right {

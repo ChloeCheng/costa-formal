@@ -1,6 +1,6 @@
 <view class="progress-cover" wx-if="{{isShow}}" bindtap='hiddenDialog' data-target="hide">
   <view class="progress-dialog">
-    <view class="progress-block">
+    <view class="progress-block {{info.next_id==0?'sliver-block':''}}">
       <view class='content-top'>
         <view class='icon-logo'>
           <image wx-if="{{info.next_id==0}}" src="../../assets/level/gold/cup.png" class="" mode='aspectFit'></image>
@@ -34,7 +34,7 @@
           </view>
         </view>
       </view>
-      <view class='des-text-block text-gray' wx-if="{{info.next_id==0}}">
+      <view class='des-text-block text-gray-sliver' wx-if="{{info.next_id==0}}">
         <view class='des-text'>
          {{currentData.silverGold.tips1}}
           

@@ -54,7 +54,7 @@ Page({
         if(data.code === 200) {
           let tmp = data.data, pointValue = tmp.max - tmp.total;
           // tmp.cups = 8;
-          // tmp.next_id =0;          
+          // tmp.next_id =3;          
           //let pointHint = tmp.hint.replace(/<[^>]+>/g, '').replace('POINTS', pointValue)
           tmp.pointValue = pointValue || 0;
           //tmp.vipcodeBase64 = '../../assets/qrcode.png1'
