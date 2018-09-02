@@ -28,7 +28,10 @@ Component({
    * 组件的方法列表
    */
   methods: {
-    hiddenDialogTrigger: function () {
+    hiddenDialogTrigger: function (e) {
+      if (e.target.dataset.target != 'hide') {
+        return
+      }
       this.triggerEvent('hiddenDialog');
     },
     showCover: function () {

@@ -4,6 +4,7 @@
     "bar": "../../components/bar/bar",
     "dialog": "../../components/dialog/dialog",
     "progress": "../../components/progress/progress",
-    "upgrade": "../../components/upgrade/index"
+    "upgrade": "../../components/upgrade/index",
+    "icon": "../../components/icon/index"
   }
 }

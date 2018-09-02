@@ -1,0 +1,4 @@
+/* components/icon/index.wxss */
+.image-item {
+  display: inline-block;
+}

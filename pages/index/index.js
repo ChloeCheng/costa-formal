@@ -67,9 +67,9 @@ Page({
             });
           }
           //next_id 2:红卡， 3:银卡， 0:金卡
-          // tmp.next_id=0; 
-          // tmp.cups = 5
-          // tmp.isShowUpgradeDialog = tmp.remind_first || true;
+          //tmp.next_id=0; 
+          //tmp.cups = 5
+          tmp.isShowUpgradeDialog = tmp.remind_first;// || true;
           // tmp.num = 2;
           _this.setData({
             'showData': tmp,
@@ -121,7 +121,10 @@ Page({
     });
     this.initPage(true);
   },
-  codeOperater(){
+  codeOperater(e){
+    if(e.target.dataset.target!='hide'){
+      return
+    }
     let code = this.data.showCode;
     this.setData({
       'showCode': !code

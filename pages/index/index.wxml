@@ -1,6 +1,6 @@
 <dialog bind:info="updateInfo" hideDialog="{{hideDialog}}"></dialog>
-<progress info="{{showData}}" isShow="{{isShowLevelDialog}}"  bind:hiddenDialog="toggleLevelDialog"></progress>
-<upgrade info="{{showData}}" isShow="{{isShowUpgradeDialog}}"  bind:hiddenDialog="toggleUpgradeDialog"></upgrade>
+<progress info="{{showData}}" isShow="{{isShowLevelDialog}}" bind:hiddenDialog="toggleLevelDialog"></progress>
+<upgrade info="{{showData}}" isShow="{{isShowUpgradeDialog}}" bind:hiddenDialog="toggleUpgradeDialog"></upgrade>
 <banner list="{{bannerList}}"></banner>
 <view class="language-change" bindtap="changeLanguage">
   <image src="{{currentLanguage==='zh' ? '../../assets/en.png' : '../../assets/zh.png'}}" mode='aspectFit'></image>
@@ -31,10 +31,10 @@
   </view>
   <view class="icon-list">
     <view class="icon-list-col-1">
-      <view class="icon-list-col-block" bindtap="codeOperater">
-        <image src="../../assets/my-code.png" mode='aspectFit'></image>
-        <view wx:if="{{showData.remind_point}}" class="new-point"></view>
-        <text>{{currentData.myCode}}</text>
+      <view class="icon-list-col-block" bindtap="codeOperater" data-target="hide">
+        <image src="../../assets/my-code.png" mode='aspectFit' data-target="hide"></image>
+        <view wx:if="{{showData.remind_point}}" class="new-point" data-target="hide"></view>
+        <text data-target="hide">{{currentData.myCode}}</text>
       </view>
       <view class="icon-list-col-block" bindtap="gotoPoint">
         <image src="../../assets/point.png" mode='aspectFit'></image>
@@ -70,11 +70,10 @@
         <text>{{currentData.edit}}</text>
       </view>
     </view>
-    <view class="over-lay" style="display:{{showCode? 'block': 'none'}}">
+    <view class="over-lay" style="display:{{showCode? 'block': 'none'}}" bindtap='codeOperater' data-target="hide">
       <view class="code-view">
-        <view class="code-pick-up" bindtap="codeOperater">
-          <image src="../../assets/card/card_active_up.png" mode='aspectFit'></image>
-          <text>{{currentData.pickUp}}</text>
+        <view class='icon-close'  data-target="hide">
+          <image src="../../assets/level/close.png" class="" mode='aspectFit' data-target="hide"></image>
         </view>
         <view class="clear"></view>
         <view class="canvas-cover" style="opacity:{{showCode? '1': '0'}}">

@@ -37,7 +37,10 @@ Component({
         url: '/pages/member/index',
       })
     },
-    hiddenDialog: function () {
+    hiddenDialog: function (e) {
+      if (e.target.dataset.target != 'hide') {
+        return
+      }
       this.triggerEvent('hiddenDialog');
     },
   }

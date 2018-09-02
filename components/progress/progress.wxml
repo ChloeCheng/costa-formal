@@ -1,7 +1,6 @@
-<view class="progress-cover" wx-if="{{isShow}}">
+<view class="progress-cover" wx-if="{{isShow}}" bindtap='hiddenDialog' data-target="hide">
   <view class="progress-dialog">
     <view class="progress-block">
-
       <view class='content-top'>
         <view class='icon-logo'>
           <image wx-if="{{info.next_id==0}}" src="../../assets/level/gold/cup.png" class="" mode='aspectFit'></image>
@@ -17,6 +16,7 @@
               <text class='text-num-left'>{{info.cups}}</text>
               <text class='text-num-right'>/{{8}}</text>
             </view>
+
             <view class="image-item" wx:key="value" wx:for="{{[1,2,3,4,5,6,7,8]}}">
               <image wx-if="{{info.cups>=item}}" src="../../assets/level/gold/num.png" class="" mode='aspectFit'></image>
               <image wx-if="{{info.cups<item}}" src="../../assets/level/gold/un-num.png" class="" mode='aspectFit'></image>
@@ -65,8 +65,8 @@
     </view>
 
     <view class="progress-bg">
-      <view class='icon-close' bindtap='hiddenDialog'>
-        <image src="../../assets/level/close.png" class="" mode='aspectFit'></image>
+      <view class='icon-close' data-target="hide">
+        <image src="../../assets/level/close.png" class="" mode='aspectFit' data-target="hide"></image>
       </view>
       <view class='bg-image'>
         <image wx-if="{{info.next_id==0}}" src="../../assets/level/gold/bg.png" class="" mode='aspectFit'></image>

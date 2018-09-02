@@ -1,5 +1,5 @@
-<view class="progress-cover" wx-if="{{isShow}}">
-  <view class="progress-dialog" wx-if="{{!isShowCover}}">
+<view class="progress-cover" wx-if="{{isShow}}" data-target="hide" bindtap='hiddenDialogTrigger'>
+  <view class="progress-dialog" wx-if="{{!isShowCover}}" >
     <view class="progress-block">
       <view class='content-top'>
         <view class='icon-logo'>
@@ -19,8 +19,8 @@
         了解一下
       </view>
     </view>
-    <view class='icon-close' bindtap='hiddenDialogTrigger'>
-      <image src="../../assets/level/close.png" class="" mode='aspectFit'></image>
+    <view class='icon-close' data-target="hide">
+      <image src="../../assets/level/close.png" class="" mode='aspectFit' data-target="hide" ></image>
     </view>
   </view>
   <view class='cover-image' wx-if="{{isShowCover}}" bindtap='hideCover'>

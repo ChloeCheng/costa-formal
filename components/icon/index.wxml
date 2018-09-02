@@ -1,0 +1,12 @@
+<!--components/icon/index.wxml-->
+<view>
+1231
+  <!-- <block wx:if="{{info.next_id==3}}">
+    <image wx-if="{{info.cups>=item}}" src="../../assets/level/sliver/num.png" class="" mode='aspectFit'></image>
+    <image wx-if="{{info.cups<item}}" src="../../assets/level/sliver/un-num.png" class="" mode='aspectFit'></image>
+  </block>
+  <block wx:if="{{info.next_id==0}}">
+    <image wx-if="{{info.cups>=item}}" src="../../assets/level/gold/num.png" class="" mode='aspectFit'></image>
+    <image wx-if="{{info.cups<item}}" src="../../assets/level/gold/un-num.png" class="" mode='aspectFit'></image>
+  </block> -->
+</view>
