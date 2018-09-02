@@ -32,7 +32,7 @@
   <view class="icon-list">
     <view class="icon-list-col-1">
       <view class="icon-list-col-block" bindtap="codeOperater" data-target="hide">
-        <image src="../../assets/my-code.png" mode='aspectFit' data-target="hide"></image>
+        <image class="code-show-icon" src="../../assets/my-code.png" mode='aspectFit' data-target="hide"></image>
         <view wx:if="{{showData.remind_point}}" class="new-point" data-target="hide"></view>
         <text data-target="hide">{{currentData.myCode}}</text>
       </view>

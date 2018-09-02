@@ -17,9 +17,9 @@
               <text class='text-num-right'>/{{8}}</text>
             </view>
 
-            <view class="image-item" wx:key="value" wx:for="{{[1,2,3,4,5,6,7,8]}}">
-              <image wx-if="{{info.cups>=item}}" src="../../assets/level/gold/num.png" class="" mode='aspectFit'></image>
-              <image wx-if="{{info.cups<item}}" src="../../assets/level/gold/un-num.png" class="" mode='aspectFit'></image>
+            <view  wx:key="value" wx:for="{{[1,2,3,4,5,6,7,8]}}" class="image-item image-item-{{index+1}} image-item-{{((index+1) <= info.cups)?'use':'unuse'}}">
+              <image src="../../assets/level/gold/num.png" class="image-item-first {{showAnimation? 'image-item-active': ''}}" mode='aspectFit'></image>
+              <image src="../../assets/level/gold/un-num.png" class="image-item-sec {{showAnimation? 'image-item-disable': ''}}" mode='aspectFit'></image>
             </view>
           </view>
           <view wx-if="{{info.next_id==3}}" class='ct-right-sliver ct-right-icon'>
@@ -27,9 +27,9 @@
               <text class='text-num-left'>{{info.cups}}</text>
               <text class='text-num-right'>/{{12}}</text>
             </view>
-            <view class="image-item" wx:key="value" wx:for="{{[1,2,3,4,5,6,7,8,9,10,11,12]}}">
-              <image wx-if="{{info.cups>=item}}" src="../../assets/level/sliver/num.png" class="" mode='aspectFit'></image>
-              <image wx-if="{{info.cups<item}}" src="../../assets/level/sliver/un-num.png" class="" mode='aspectFit'></image>
+            <view wx:key="value" wx:for="{{[1,2,3,4,5,6,7,8,9,10,11,12]}}" class="image-item image-item-{{index+1}} image-item-{{((index+1) <= info.cups)?'use':'unuse'}}">
+              <image class="image-item-first {{showAnimation ? 'image-item-active' : ''}}" src="../../assets/level/sliver/num.png"  mode='aspectFit'></image>
+              <image class="image-item-sec {{showAnimation ? 'image-item-disable' : ''}}" src="../../assets/level/sliver/un-num.png"  mode='aspectFit'></image>
             </view>
           </view>
         </view>
@@ -37,7 +37,10 @@
       <view class='des-text-block' wx-if="{{info.next_id==0}}">
         <view class='des-text'>
          {{currentData.silverGold.tips1}}
-          {{8-info.cups}}
+          
+          <text>
+              {{8-info.cups}}
+          </text>
           {{currentData.silverGold.tips2}}
         </view>
         <view class='des-text'>
@@ -47,7 +50,10 @@
       <view class='des-text-block' wx-if="{{info.next_id==3}}">
         <view class='des-text'>
           {{currentData.silverGold.tips1}}
-          {{12-info.cups}}
+          <text>
+              {{12-info.cups}}
+          </text>
+         
           {{currentData.silverGold.tips2}}
         </view>
         <view class='des-text'>
@@ -69,8 +75,8 @@
     </view>
 
     <view class="progress-bg">
-      <view class='icon-close' data-target="hide">
-        <image src="../../assets/level/close.png" class="" mode='aspectFit' data-target="hide"></image>
+      <view class='icon-close' bindtap="closeAnimation">
+        <image src="../../assets/level/close.png" class="" mode='aspectFit'></image>
       </view>
       <view class='bg-image'>
         <image wx-if="{{info.next_id==0}}" src="../../assets/level/gold/bg.png" class="" mode='aspectFit'></image>

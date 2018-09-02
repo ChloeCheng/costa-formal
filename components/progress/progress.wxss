@@ -98,6 +98,10 @@ button.u-login-wx::after {
   font-size: 12px;
   color: white;
 }
+.des-text-block text {
+  display: inline-block;
+  color: #a6002a;
+}
 
 .btn-detail {
   border-radius: 8rpx;
@@ -124,7 +128,11 @@ button.u-login-wx::after {
   margin-top: 10px;
   text-align: left;
 }
+.ct-right-sliver{
+  width: 260rpx;
+}
 
+  
 .ct-right-icon image {
   width: 40rpx;
   height: 40rpx;
@@ -132,7 +140,83 @@ button.u-login-wx::after {
 
 .image-item {
   display: inline-block;
+  height: 42rpx;
+  width: 42rpx;
+  overflow: hidden;
+  position: relative;
 }
+.image-item image{
+  width: 40rpx;
+  height: 40rpx;
+  position: absolute;
+  
+}
+
+
+
+.image-item.image-item-1 image{
+  transition: top 200ms ease 200ms;
+}
+.image-item.image-item-2 image{
+  transition: top 200ms ease 400ms;
+}
+.image-item.image-item-3 image{
+  transition: top 200ms ease 600ms;
+}
+.image-item.image-item-4 image{
+  transition: top 200ms ease 800ms;
+}
+.image-item.image-item-5 image{
+  transition: top 200ms ease 1s;
+}
+.image-item.image-item-6 image{
+  transition: top 200ms ease 1200ms;
+}
+.image-item.image-item-7 image{
+  transition: top 200ms ease 1400ms;
+}
+.image-item.image-item-8 image{
+  transition: top 200ms ease 1600ms;
+}
+.image-item.image-item-9 image{
+  transition: top 200ms ease 1800ms;
+}
+
+.image-item.image-item-10 image{
+  transition: top 200ms ease 2s;
+}
+
+.image-item.image-item-11 image{
+  transition: top 200ms ease 2200ms;
+}
+
+.image-item.image-item-12 image{
+  transition: top 200ms ease 2400ms;
+}
+
+.image-item.image-item-use image.image-item-first {
+  top: -40rpx;
+  left:0rpx
+}
+.image-item.image-item-use image.image-item-sec {
+  top: 0rpx;
+  left:0rpx
+}
+
+.image-item.image-item-use image.image-item-first.image-item-active {
+  top: 0rpx;
+  left:0rpx
+}
+
+.image-item.image-item-use image.image-item-sec.image-item-disable {
+  top: 42rpx;
+  left:0rpx
+}
+
+
+
+
+
 
 .text-num {
   text-align: left;
@@ -142,6 +226,7 @@ button.u-login-wx::after {
 
 .text-num .text-num-left {
   font-size: 30px;
+  color:#a6002a;
 }
 .content-right{
   margin-left: 10px;

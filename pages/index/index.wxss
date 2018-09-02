@@ -255,6 +255,10 @@ button[class="u-login-wx"]::after {
   height: 80rpx;
 }
 
+.icon-list-col-block image.code-show-icon{
+  width: 72rpx;
+}
+
 .new-point {
   position: absolute;
   width: 10rpx;
