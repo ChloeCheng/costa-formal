@@ -48,8 +48,11 @@ button.u-login-wx::after {
 
 .icon-close {
   position: absolute;
-  right: 10rpx;
+  right: -30rpx;
   top: -40rpx;
+  padding:0 20px;
+  z-index:1;
+
 }
 
 .icon-close image {

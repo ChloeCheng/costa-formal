@@ -67,9 +67,10 @@ Page({
             });
           }
           //next_id 2:红卡， 3:银卡， 0:金卡
-          //tmp.next_id=3; 
-          tmp.isShowUpgradeDialog = true;
-          tmp.num = 2;
+          // tmp.next_id=0; 
+          // tmp.cups = 5
+          // tmp.isShowUpgradeDialog = tmp.remind_first || true;
+          // tmp.num = 2;
           _this.setData({
             'showData': tmp,
             showCode: false,

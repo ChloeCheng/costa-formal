@@ -14,29 +14,29 @@
           </view>
           <view wx-if="{{info.next_id==0}}" class='ct-right-gold ct-right-icon'>
             <view class='text-num'>
-              <text class='text-num-left'>{{info.num}}</text>
-              <text class='text-num-right'>/{{8-info.num}}</text>
+              <text class='text-num-left'>{{info.cups}}</text>
+              <text class='text-num-right'>/{{8}}</text>
             </view>
             <view class="image-item" wx:key="value" wx:for="{{[1,2,3,4,5,6,7,8]}}">
-              <image wx-if="{{info.num>=item}}" src="../../assets/level/gold/num.png" class="" mode='aspectFit'></image>
-              <image wx-if="{{info.num<item}}" src="../../assets/level/gold/un-num.png" class="" mode='aspectFit'></image>
+              <image wx-if="{{info.cups>=item}}" src="../../assets/level/gold/num.png" class="" mode='aspectFit'></image>
+              <image wx-if="{{info.cups<item}}" src="../../assets/level/gold/un-num.png" class="" mode='aspectFit'></image>
             </view>
           </view>
           <view wx-if="{{info.next_id==3}}" class='ct-right-sliver ct-right-icon'>
             <view class='text-num'>
-              <text class='text-num-left'>{{info.num}}</text>
-              <text class='text-num-right'>/{{12-info.num}}</text>
+              <text class='text-num-left'>{{info.cups}}</text>
+              <text class='text-num-right'>/{{12}}</text>
             </view>
             <view class="image-item" wx:key="value" wx:for="{{[1,2,3,4,5,6,7,8,9,10,11,12]}}">
-              <image wx-if="{{info.num>=item}}" src="../../assets/level/sliver/num.png" class="" mode='aspectFit'></image>
-              <image wx-if="{{info.num<item}}" src="../../assets/level/sliver/un-num.png" class="" mode='aspectFit'></image>
+              <image wx-if="{{info.cups>=item}}" src="../../assets/level/sliver/num.png" class="" mode='aspectFit'></image>
+              <image wx-if="{{info.cups<item}}" src="../../assets/level/sliver/un-num.png" class="" mode='aspectFit'></image>
             </view>
           </view>
         </view>
       </view>
       <view class='des-text-block' wx-if="{{info.next_id==0}}">
         <view class='des-text'>
-          再累计{{8-info.num}}杯可获赠
+          再累计{{8-info.cups}}杯可获赠
         </view>
         <view class='des-text'>
           免费中杯饮品券一张
@@ -44,7 +44,7 @@
       </view>
       <view class='des-text-block' wx-if="{{info.next_id==3}}">
         <view class='des-text'>
-          再累计{{12-info.num}}杯可获赠
+          再累计{{12-info.cups}}杯可获赠
         </view>
         <view class='des-text'>
           免费中杯饮品券一张
@@ -58,7 +58,7 @@
           累计2杯即可获赠免费饮品券
         </view>
       </view>
-      <view class='btn-detail'  bindtap='goDetail'>
+      <view class='btn-detail' bindtap='goDetail'>
         查看详情
       </view>
 

@@ -3,7 +3,7 @@
     <view class="progress-block">
       <view class='content-top'>
         <view class='icon-logo'>
-          <image src="../../assets/costa-logo.png" class="" mode='aspectFit'></image>
+          <image src="../../assets/level/costa.jpg" class="" mode='aspectFit'></image>
         </view>
       </view>
       <view class='des-text-block'>

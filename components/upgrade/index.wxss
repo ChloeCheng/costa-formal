@@ -58,8 +58,10 @@ button.u-login-wx::after {
 
 .icon-close {
   position: absolute;
-  right: 10rpx;
+  right: -30rpx;
   top: -70rpx;
+  padding:0 20px;
+  z-index:1;
 }
 
 .icon-close image {
@@ -84,8 +86,8 @@ button.u-login-wx::after {
 }
 
 .icon-logo image {
-  width: 110rpx;
-  height: 71rpx;
+  width: 220rpx;
+  height: 80rpx;
   margin: 0;
   padding: 0;
 }
