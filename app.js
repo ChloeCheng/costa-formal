@@ -34,6 +34,18 @@ App({
       promotion:{
         title:'最新活动'
       },
+      process:{
+        btnTxt:'查看详情',
+        red:{
+          tips1:'升级银卡即可解锁满赠福利：',
+          tips2:'累计12杯即可获赠免费饮品券',
+        },
+        silverGold:{
+          tips1:'再累计',
+          tips2:'杯可获赠',
+          tips3: '免费中杯饮品券一张'
+        }
+      },
       card:{
         title: '我的礼券',
         myCard: '我的礼券',
@@ -278,6 +290,18 @@ App({
         close: 'Closed',
         pickUp: 'pack up',
         codeDesc: 'Please present QR code'
+      },
+      process: {
+        btnTxt: 'Detail',
+        red: {
+          tips1: 'Upgrade to Silver level to enjoy:',
+          tips2: 'Buy 12 handcrafted beverages at full price get 1 for free',
+        },
+        silverGold: {
+          tips1: 'Purchase ',
+          tips2: ' more handcrafted beverages',
+          tips3: 'To get a free drink voucher'
+        }
       },
       card:{
         title: 'My Coupons',

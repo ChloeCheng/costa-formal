@@ -36,30 +36,34 @@
       </view>
       <view class='des-text-block' wx-if="{{info.next_id==0}}">
         <view class='des-text'>
-          再累计{{8-info.cups}}杯可获赠
+         {{currentData.silverGold.tips1}}
+          {{8-info.cups}}
+          {{currentData.silverGold.tips2}}
         </view>
         <view class='des-text'>
-          免费中杯饮品券一张
+           {{currentData.silverGold.tips3}}
         </view>
       </view>
       <view class='des-text-block' wx-if="{{info.next_id==3}}">
         <view class='des-text'>
-          再累计{{12-info.cups}}杯可获赠
+          {{currentData.silverGold.tips1}}
+          {{12-info.cups}}
+          {{currentData.silverGold.tips2}}
         </view>
         <view class='des-text'>
-          免费中杯饮品券一张
+          {{currentData.silverGold.tips3}}
         </view>
       </view>
       <view class='des-text-block' wx-if="{{info.next_id==2}}">
         <view class='des-text'>
-          升级银卡即可解锁满赠福利：
+          {{currentData.red.tips1}}
         </view>
         <view class='des-text'>
-          累计2杯即可获赠免费饮品券
+         {{currentData.red.tips2}}
         </view>
       </view>
       <view class='btn-detail' bindtap='goDetail'>
-        查看详情
+        {{currentData.btnTxt}}
       </view>
 
     </view>
