@@ -34,7 +34,7 @@
           </view>
         </view>
       </view>
-      <view class='des-text-block' wx-if="{{info.next_id==0}}">
+      <view class='des-text-block text-gray' wx-if="{{info.next_id==0}}">
         <view class='des-text'>
          {{currentData.silverGold.tips1}}
           
@@ -47,7 +47,7 @@
            {{currentData.silverGold.tips3}}
         </view>
       </view>
-      <view class='des-text-block' wx-if="{{info.next_id==3}}">
+      <view class='des-text-block text-gray' wx-if="{{info.next_id==3}}">
         <view class='des-text'>
           {{currentData.silverGold.tips1}}
           <text>
