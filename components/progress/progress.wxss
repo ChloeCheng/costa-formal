@@ -49,9 +49,9 @@ button.u-login-wx::after {
 .icon-close {
   position: absolute;
   right: -30rpx;
-  top: -26rpx;
+  top: -6rpx;
   padding:0 20px;
-  z-index:1;
+  z-index:999;
 
 }
 
@@ -92,22 +92,22 @@ button.u-login-wx::after {
 
 .bg-image image {
   width: 100%;
-  height: 500rpx;
+  height: 540rpx;
 }
 
 .des-text-block {
-  font-size: 12px;
+  font-size: 26rpx;
   color: white;
 }
 .des-text-block.text-gray{
   color:#888;
 }
 .des-text-block.text-gray-sliver{
-  color:#af9364;
+  color:#5f4719;
 }
 .des-text-block text {
   display: inline-block;
-  color: #a6002a;
+  color: #6f233d;
 }
 
 .btn-detail {
@@ -233,10 +233,18 @@ button.u-login-wx::after {
   font-size: 16px;
   margin-bottom: 10px;
 }
+.ct-right-sliver .text-num{
+  color: #a6a6a6;
+  font-size: 50rpx;
+}
+.ct-right-gold .text-num{
+  color: #8d7341;
+  font-size: 50rpx;
+}
 
 .text-num .text-num-left {
-  font-size: 30px;
-  color:#a6002a;
+  font-size: 75rpx;
+  color:#6f233d;
 }
 .content-right{
   margin-left: 10px;
