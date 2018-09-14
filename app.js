@@ -2,6 +2,7 @@ var login = require('./modules/login.js')
 const app = getApp()
 App({
   global: {
+    activityShareData:{},
     h5HostUrl:'https://h5.costa.net.cn',
     hostUrl:'https://miniprogramapi.costa.net.cn',
     wxUserInfo: {},

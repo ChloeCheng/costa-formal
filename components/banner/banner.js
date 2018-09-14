@@ -35,6 +35,7 @@ Component({
     methods: {
         handleBannerItemTap: function(e){
            let url = e.currentTarget.dataset.bannerItem.url;
+           getApp().global.activityShareData = e.currentTarget.dataset.bannerItem;
            if(url){
              url = getApp().global.h5HostUrl + url;  //'/pages/activity/summer/index'
              wx.navigateTo({

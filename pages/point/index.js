@@ -73,6 +73,11 @@ Page({
     }
   },
   goRedeem: function (e) {
+    app.global.activityShareData = {
+      share_imageurl:"https://h5.costa.net.cn/exchange/img/share.jpg",
+      share_path:"https://h5.costa.net.cn/wechat/point-exchange-coupon?scheme=https",
+      share_title:"COSTA 积分超值兑限时上线"
+    };
     wx.navigateTo({
       //url: '/pages/activity/redeem/index'
       url: ('/pages/special/special?url=' + encodeURIComponent('https://h5.costa.net.cn/wechat/point-exchange-coupon?scheme=https'))

@@ -49,7 +49,8 @@ Page({
   },
   tapClick(e) {
     //'/wechat/campaign-mgm-index?scheme=https';
-    let url = e.currentTarget.dataset.banneritem.url;          
+    let url = e.currentTarget.dataset.banneritem.url;
+    getApp().global.activityShareData = e.currentTarget.dataset.banneritem;       
     if (url) {
       url = getApp().global.h5HostUrl + url;  //'/pages/activity/summer/index'
       wx.navigateTo({

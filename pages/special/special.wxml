@@ -1,3 +1,2 @@
 <!--pages/special/special.wxml-->
 <web-view src="{{webviewUrl}}"></web-view>
-

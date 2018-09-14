@@ -20,7 +20,7 @@ Page({
     isShowLevelDialog:false,
     isShowUpgradeDialog: false,
   },
-  onLoad: function () {
+  onLoad: function (options) {
     let _this = this;
     wx.getUserInfo({
       success: function(res) {
@@ -34,6 +34,16 @@ Page({
     })
     _this.initPage();
     _this.getBanner();
+
+     /*分享之后进入下一个页面*/
+     let query = options;
+     if(query && query.$route){
+       const route = decodeURIComponent(query.$route);
+       wx.navigateTo({
+         url: route
+       });
+     }
+
   },
   toggleLevelDialog(){
     this.setData({ isShowLevelDialog: !this.data.isShowLevelDialog})
@@ -81,9 +91,6 @@ Page({
         }
       }
      )
-  
-  
-  
   
   },
   getBanner(){
@@ -185,7 +192,8 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    login.checkLogin()
+   
+    login.checkLogin();
     this.initPage(true);
   },
 
